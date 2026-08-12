@@ -1,135 +1,278 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo dos Cavalos - Guia de Raças Equinas</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header>
-        <div class="logo">
-            <h1>Mundo <span>Equino</span></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#racas">Raças</a></li>
-                <li><a href="#cuidados">Cuidados</a></li>
-                <li><a href="#curiosidades">Curiosidades</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    background-color: #f4f6f9;
+    line-height: 1.6;
+}
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h2>Portal do Cavalo</h2>
-            <p>Aprenda tudo sobre as principais raças, características físicas e a biologia dos cavalos.</p>
-            <a href="#racas" class="btn">Conhecer as Raças</a>
-        </div>
-    </section>
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
 
-    <main class="container">
-        <section id="racas">
-            <h2>Raças de Cavalos</h2>
-            <p class="subtitle">Escolha uma categoria para filtrar as raças:</p>
+/* Header */
+header {
+    background-color: #1a252f;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
 
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todas as Raças</button>
-                <button class="filter-btn" data-filter="trabalho">Trabalho e Lida</button>
-                <button class="filter-btn" data-filter="elegancia">Elegância e Porte</button>
-                <button class="filter-btn" data-filter="forca">Força e Tração</button>
-            </div>
+.logo h1 {
+    font-size: 1.8rem;
+}
 
-            <div class="racas-grid">
-                
-                <div class="raca-card" data-category="trabalho">
-                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Foto de um Cavalo Mangalarga Marchador" class="card-img">
-                    <div class="card-body">
-                        <h3>Mangalarga Marchador</h3>
-                        <p>Raça genuinamente brasileira desenvolvida no sul de Minas Gerais. É mundialmente famosa por seu andamento macio (marcha), que não dá o impacto do trote tradicional, permitindo cavalgadas confortáveis por horas sem cansar o cavaleiro.</p>
-                        <span class="badge">Nacional / Marcha</span>
-                    </div>
-                </div>
+.logo span {
+    color: #e67e22;
+}
 
-                <div class="raca-card" data-category="elegancia">
-                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Foto de um Cavalo Puro Sangue Árabe" class="card-img">
-                    <div class="card-body">
-                        <h3>Puro Sangue Árabe</h3>
-                        <p>Uma das raças mais antigas e nobres do mundo. Destaca-se pela cabeça de perfil côncavo, olhos expressivos, cauda erguida e uma resistência física incomparável em provas de longa distância.</p>
-                        <span class="badge">Resistência / Elegância</span>
-                    </div>
-                </div>
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
 
-                <div class="raca-card" data-category="trabalho">
-                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=800&q=80" alt="Foto de um Cavalo Quarto de Milha" class="card-img">
-                    <div class="card-body">
-                        <h3>Quarto de Milha</h3>
-                        <p>Desenvolvido nos EUA, é o cavalo mais rápido em curtas distâncias. Possui musculatura extremamente potente, sendo a raça preferida no trabalho com gado, rodeios e provas de velocidade.</p>
-                        <span class="badge">Velocidade / Lida</span>
-                    </div>
-                </div>
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
 
-                <div class="raca-card" data-category="elegancia">
-                    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80" alt="Foto de um Cavalo Frísio" class="card-img">
-                    <div class="card-body">
-                        <h3>Frísio (Friesian)</h3>
-                        <p>Originário da Holanda, impressiona por sua pelagem preta brilhante, crina longa e ondulada e pelagem abundante sobre as cascos. É calmo, majestoso e amplamente usado no adestramento clássico.</p>
-                        <span class="badge">Imponente / Adestramento</span>
-                    </div>
-                </div>
+nav a:hover {
+    color: #e67e22;
+}
 
-                <div class="raca-card" data-category="forca">
-                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=800&q=80" alt="Foto de um Cavalo Clydesdale" class="card-img">
-                    <div class="card-body">
-                        <h3>Clydesdale</h3>
-                        <p>Originário da Escócia, é uma raça gigante de tração pesada. Reconhecido pelas patas brancas cobertas por pelos longos ("plumas") e pelo grande porte musculoso. Apesar do tamanho, possui temperamento extremamente manso.</p>
-                        <span class="badge">Tração / Força</span>
-                    </div>
-                </div>
+/* Banner Principal de Cavalo */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
 
-            </div>
-        </section>
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
 
-        <hr>
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
 
-        <section id="cuidados" class="card-section">
-            <h2>Cuidados Essenciais com o Cavalo</h2>
-            <div class="cuidados-list">
-                <div class="care-item">
-                    <h4>🌾 Nutrição</h4>
-                    <p>Feno de alta qualidade, pastagem verde limpa e suplementação adequada à rotina do animal.</p>
-                </div>
-                <div class="care-item">
-                    <h4>💧 Água Fresca</h4>
-                    <p>Um cavalo precisa de 30 a 50 litros de água limpa e fresca diariamente.</p>
-                </div>
-                <div class="care-item">
-                    <h4>🐴 Casqueamento</h4>
-                    <p>Higienização diária das patas e manutenção dos cascos por um ferrador profissional a cada 4-6 semanas.</p>
-                </div>
-                <div class="care-item">
-                    <h4>🩺 Veterinário</h4>
-                    <p>Controle de vermífugos, exames odontológicos e vacinação em dia.</p>
-                </div>
-            </div>
-        </section>
+.btn {
+    display: inline-block;
+    background-color: #e67e22;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
 
-        <section id="curiosidades" class="curiosidades-box">
-            <h2>Fato Curioso sobre Cavalos</h2>
-            <div id="fact-display">
-                <p id="fact-text">Clique no botão para descobrir uma curiosidade equina!</p>
-            </div>
-            <button id="btn-fact">Gerar Curiosidade</button>
-        </section>
-    </main>
+.btn:hover {
+    background-color: #d35400;
+}
 
-    <footer>
-        <p>&copy; 2026 Mundo Equino - Todos os direitos reservados.</p>
-    </footer>
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+hr {
+    border: 0;
+    height: 1px;
+    background: #dcdde1;
+    margin: 3rem 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a252f;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+/* Filtros */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.2rem;
+    border: 2px solid #e67e22;
+    background: transparent;
+    color: #e67e22;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #e67e22;
+    color: white;
+}
+
+/* Grid das Raças */
+.racas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.raca-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.raca-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    margin-bottom: 0.8rem;
+    color: #1a252f;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 1.2rem;
+    background: #eafaf1;
+    color: #27ae60;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+/* Cuidados */
+.cuidados-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.care-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 5px solid #2980b9;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.care-item h4 {
+    margin-bottom: 0.5rem;
+    color: #1a252f;
+}
+
+/* Curiosidades Box */
+.curiosidades-box {
+    background: #fef5e7;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #fad7a0;
+}
+
+#fact-display {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #d35400;
+}
+
+#btn-fact {
+    background-color: #1a252f;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+#btn-fact:hover {
+    background-color: #2c3e50;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+}
