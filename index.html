@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Equino | Guia Interativo de Raças</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>MUNDO EQUINO</h1>
+            <p>Descubra a nobreza, a força e a beleza das maiores raças de cavalos do mundo.</p>
+            <a href="#catalogo" class="btn-primary">Explorar Raças</a>
+        </div>
+    </header>
+
+    <main id="catalogo" class="container">
+        <section class="controls-section">
+            <h2>Conheça as Raças</h2>
+            <div class="filter-wrapper">
+                <input type="text" id="searchInput" placeholder="Busque por nome...">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="todos">Todos</button>
+                    <button class="filter-btn" data-category="velocidade">Velocidade</button>
+                    <button class="filter-btn" data-category="forca">Força</button>
+                    <button class="filter-btn" data-category="porte">Grande Porte</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-racas" id="racasGrid">
+            </section>
+    </main>
+
+    <div id="modalRaca" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mundo Equino. Desenvolvido para amantes de cavalos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
