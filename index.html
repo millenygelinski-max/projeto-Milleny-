@@ -1,112 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperium Equino | O Enciclopédia das Raças</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Mundo dos Cavalos - Tudo sobre o Universo Equino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">IMPERIUM <span>EQUINO</span></div>
-        <ul class="nav-links">
-            <li><a href="#hero">Início</a></li>
-            <li><a href="#racas">Raças</a></li>
-            <li><a href="#comparativo">Comparativo</a></li>
-            <li><a href="#curiosidades">Curiosidades</a></li>
-        </ul>
-    </nav>
-
-    <header id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-card">
-            <span class="tag">Mundo Majestoso</span>
-            <h1>A Grandeza dos Cavalos</h1>
-            <p>Conheça as raças mais impressionantes, históricas e velozes do planeta em uma experiência interativa.</p>
-            <a href="#racas" class="btn-primary">Explorar o Catálogo</a>
+    <header>
+        <div class="logo">
+            <h1>Mundo <span>Equino</span></h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#origem">Origem & Evolução</a></li>
+                <li><a href="#racas">Raças</a></li>
+                <li><a href="#cuidados">Cuidados</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="racas" class="container">
-        <div class="section-header">
-            <h2>Galeria de Raças</h2>
-            <p>Filtre por aptidão ou pesquise diretamente pelo nome da raça.</p>
-        </div>
-
-        <div class="controls-bar">
-            <input type="text" id="searchInput" placeholder="🔍 Pesquisar raça (ex: Árabe, Frísio)...">
-            <div class="filter-group">
-                <button class="filter-btn active" data-filter="todos">Todas</button>
-                <button class="filter-btn" data-filter="sela">Sela & Salto</button>
-                <button class="filter-btn" data-filter="tracao">Trabalho & Tração</button>
-                <button class="filter-btn" data-filter="velocidade">Corrida</button>
-            </div>
-        </div>
-
-        <div class="grid-racas" id="gridRacas">
-            </div>
-    </section>
-
-    <section id="comparativo" class="container highlight-section">
-        <div class="section-header">
-            <h2>Comparativo de Atributos</h2>
-            <p>Veja os pontos fortes de cada raça lado a lado.</p>
-        </div>
-        <div class="table-responsive">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Raça</th>
-                        <th>Velocidade</th>
-                        <th>Força</th>
-                        <th>Agilidade</th>
-                        <th>Temperamento</th>
-                    </tr>
-                </thead>
-                <tbody id="tabelaComparativa">
-                    </tbody>
-            </table>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>A Nobreza e a Força dos Cavalos</h2>
+            <p>Descubra a história, as principais raças e a fascinante biologia dos animais que moldaram a civilização humana.</p>
+            <a href="#racas" class="btn">Explorar Raças</a>
         </div>
     </section>
 
-    <section id="curiosidades" class="container">
-        <div class="section-header">
-            <h2>Fatos Incríveis sobre os Equinos</h2>
-            <p>Coisas que você provavelmente não sabia sobre esses animais.</p>
-        </div>
-        <div class="accordion-wrapper">
-            <div class="accordion-item">
-                <button class="accordion-header">Visão de quase 360 graus <span>+</span></button>
-                <div class="accordion-content">
-                    <p>Devido à posição dos olhos nas laterais da cabeça, os cavalos conseguem enxergar quase tudo ao seu redor, exceto diretamente atrás e logo à frente do focinho.</p>
+    <main class="container">
+        <section id="origem" class="card-section">
+            <h2>Origem e Biologia</h2>
+            <p>O cavalo moderno (<em>Equus caballus</em>) evoluiu ao longo de aproximadamente 50 milhões de anos, partindo de um pequeno mamífero quadrupede com vários dedos até o animal gracioso e veloz que conhecemos hoje.</p>
+            
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Alimentação</h3>
+                    <p>Sendo herbívoros não ruminantes, possuem um sistema digestivo adaptado para consumir grandes quantidades de fibras, como gramíneas e feno.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Comportamento</h3>
+                    <p>Cavalos são animais gregários (vivem em manadas) e de presa, o que significa que possuem sentidos aguçados e reflexos rápidos de fuga.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Comunicação</h3>
+                    <p>Comunicam-se através de relinchos, linguagem corporal complexa e pela posição das orelhas, olhos e narinas.</p>
                 </div>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header">Memória de longo prazo incrível <span>+</span></button>
-                <div class="accordion-content">
-                    <p>Estudos indicam que os cavalos conseguem reconhecer rostos humanos e lembrar de pessoas que os trataram bem (ou mal) mesmo após anos de separação.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">Eles dormem de pé! <span>+</span></button>
-                <div class="accordion-content">
-                    <p>Graças a um sistema especial de travamento de seus tendões e ligamentos nas patas, os cavalos conseguem relaxar os músculos e cochilar em pé sem cair.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <div id="modalRaca" class="modal">
-        <div class="modal-card">
-            <button class="modal-close" id="closeModal">&times;</button>
-            <div id="modalDetails"></div>
-        </div>
-    </div>
+        <hr>
+
+        <section id="racas">
+            <h2>Principais Raças de Cavalos</h2>
+            <p class="subtitle">Clique nas abas abaixo para filtrar por tipo de raça:</p>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="trabalho">Trabalho / Velocidade</button>
+                <button class="filter-btn" data-filter="elegancia">Elegância / Adestramento</button>
+            </div>
+
+            <div class="racas-grid">
+                <div class="raca-card" data-category="elegancia">
+                    <div class="card-header arabe"></div>
+                    <div class="card-body">
+                        <h3>Puro Sangue Árabe</h3>
+                        <p>Uma das raças mais antigas do mundo. Conhecida por sua resistência física incrível, formato distinto da cabeça e cauda erguida.</p>
+                        <span class="badge">Elegância</span>
+                    </div>
+                </div>
+
+                <div class="raca-card" data-category="trabalho">
+                    <div class="card-header quarto"></div>
+                    <div class="card-body">
+                        <h3>Quarto de Milha</h3>
+                        <p>Famoso por sua aceleração rápida em curtas distâncias. É extremamente versátil, usado tanto na lida no campo quanto em provas de tambor.</p>
+                        <span class="badge">Velocidade</span>
+                    </div>
+                </div>
+
+                <div class="raca-card" data-category="trabalho">
+                    <div class="card-header mangalarga"></div>
+                    <div class="card-body">
+                        <h3>Mangalarga Marchador</h3>
+                        <p>Orgulho nacional brasileiro! Destaca-se pelo andamento em "marcha", que proporciona uma montaria extremamente macia e confortável.</p>
+                        <span class="badge">Nacional</span>
+                    </div>
+                </div>
+
+                <div class="raca-card" data-category="elegancia">
+                    <div class="card-header frisio"></div>
+                    <div class="card-body">
+                        <h3>Frísio (Friesian)</h3>
+                        <p>Originário da Holanda, impressiona por sua pelagem preta brilhante, crina abundante e movimentos imponentes e elegantes.</p>
+                        <span class="badge">Elegância</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="cuidados" class="card-section">
+            <h2>Cuidados Essenciais</h2>
+            <div class="cuidados-list">
+                <div class="care-item">
+                    <h4>🌾 Nutrição Adequada</h4>
+                    <p>Dieta equilibrada à base de pastagem de qualidade, feno fresco e ração concentrada quando necessário.</p>
+                </div>
+                <div class="care-item">
+                    <h4>💧 Hidratação</h4>
+                    <p>Um cavalo adulto pode beber entre 30 e 50 litros de água limpa e fresca diariamente.</p>
+                </div>
+                <div class="care-item">
+                    <h4>🐴 Casqueamento e Ferragamento</h4>
+                    <p>Manutenção dos cascos a cada 4 a 8 semanas para prevenir claudicações e lesões graves.</p>
+                </div>
+                <div class="care-item">
+                    <h4>🩺 Acompanhamento Veterinário</h4>
+                    <p>Vacinação em dia, vermifugação periódica e cuidados odontológicos para garantir a mastigação correta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="curiosidades" class="curiosidades-box">
+            <h2>Fatos Surpreendentes</h2>
+            <div id="fact-display">
+                <p id="fact-text">Clique no botão abaixo para descobrir uma curiosidade!</p>
+            </div>
+            <button id="btn-fact">Ver Nova Curiosidade</button>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Imperium Equino — Celebrando a nobreza dos cavalos com estilo.</p>
+        <p>&copy; 2026 Mundo Equino - Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
