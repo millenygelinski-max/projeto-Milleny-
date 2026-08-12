@@ -1,4 +1,3 @@
-
 /* --- Lógica do Jogo da Velha (Símbolos: 🐎 e 🤠) --- */
 let board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = '🐎';
@@ -36,7 +35,7 @@ function checkWinner() {
 
     if (roundWon) {
         let vencedorNome = currentPlayer === '🐎' ? 'Cavalo (🐎)' : 'Sela (🤠)';
-        document.getElementById('ttt-msg').innerText = `Vitória do ${vencedorNome}! 🎉`;
+        document.getElementById('ttt-msg').innerText = `Vitória do ${vencedorNome}! 🎉🏆`;
         isGameActive = false;
         return;
     }
@@ -66,18 +65,18 @@ function checkGuess() {
     const msg = document.getElementById('guess-msg');
 
     if (!userGuess || userGuess < 1 || userGuess > 10) {
-        msg.innerText = 'Digite um número de 1 a 10!';
+        msg.innerText = 'Digite um número válido de 1 a 10!';
         msg.style.color = '#c0392b';
         return;
     }
 
     if (userGuess === secretNumber) {
-        msg.innerText = 'Impressionante! Acertou em cheio! 🏆';
+        msg.innerText = 'Impressionante! Acertou em cheio na baliza! 🎯';
         msg.style.color = '#27ae60';
         setTimeout(() => {
             secretNumber = Math.floor(Math.random() * 10) + 1;
-            msg.innerText = 'Novo desafio gerado! Tente adivinhar.';
-            msg.style.color = '#2c221e';
+            msg.innerText = 'Novo desafio gerado! Faça sua aposta.';
+            msg.style.color = '#2b1d14';
             document.getElementById('guessInput').value = '';
         }, 3000);
     } else if (userGuess < secretNumber) {
