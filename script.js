@@ -58,7 +58,7 @@ function resetTicTacToe() {
     }
 }
 
-/* --- Lógica do Jogo de Adivinhação de Raças/Números --- */
+/* --- Lógica do Jogo de Adivinhação --- */
 let secretNumber = Math.floor(Math.random() * 10) + 1;
 
 function checkGuess() {
