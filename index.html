@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,40 +10,43 @@
 <body>
 
     <header>
-        <h1>🐎 CAVALOOOOOOO! 🐎</h1>
-        <p>O universo fascinante das raças, curiosidades, nomes e muita diversão equina!</p>
+        <div class="header-content">
+            <h1>🐎 CAVALOOOOOOO! 🐎</h1>
+            <p>O universo fascinante das raças, curiosidades, nomes e muita diversão equina!</p>
+        </div>
     </header>
 
     <main>
-        <!-- Galeria com Novas Fotos das 5 Raças -->
-        <section>
-            <h2>📸 Galeria Atualizada das 5 Raças</h2>
+        <!-- Galeria 100% de Cavalos -->
+        <section class="card-section">
+            <h2>📸 Galeria Oficial: As 5 Raças Majestosas</h2>
+            <p class="section-subtitle">Passe o mouse para ver os detalhes de cada raça pura</p>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=400&q=80" alt="Mangalarga Marchador">
+                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=600&q=80" alt="Mangalarga Marchador">
                     <div class="photo-caption">Mangalarga Marchador</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80" alt="Quarto de Milha">
+                    <img src="https://images.unsplash.com/photo-1598880940371-c756e015cea1?auto=format&fit=crop&w=600&q=80" alt="Quarto de Milha">
                     <div class="photo-caption">Quarto de Milha</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1508873696983-2df5c920ac1c?auto=format&fit=crop&w=400&q=80" alt="Árabe">
-                    <div class="photo-caption">Árabe</div>
+                    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=600&q=80" alt="Cavalo Árabe">
+                    <div class="photo-caption">Cavalo Árabe</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1565538465682-4dffc42a5a54?auto=format&fit=crop&w=400&q=80" alt="Puro Sangue Inglês">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Puro Sangue Inglês">
                     <div class="photo-caption">Puro Sangue Inglês</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=400&q=80" alt="Crioulo">
-                    <div class="photo-caption">Crioulo</div>
+                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=600&q=80" alt="Cavalo Crioulo">
+                    <div class="photo-caption">Cavalo Crioulo</div>
                 </div>
             </div>
         </section>
 
-        <!-- Explicação das 5 Raças -->
-        <section class="info-section">
+        <!-- Explicação Completa das 5 Raças -->
+        <section class="card-section">
             <h2>📖 Conhecendo a Fundo as 5 Raças</h2>
             <div class="breeds-container">
                 <div class="breed-card">
@@ -68,10 +72,10 @@
             </div>
         </section>
 
-        <!-- Seção de Ideias de Nomes -->
-        <section class="names-section">
+        <!-- Ideias de Nomes -->
+        <section class="card-section">
             <h2>💡 Ideias de Nomes para o seu Cavalo</h2>
-            <p style="text-align: center; margin-bottom: 1rem; color: #555;">Procurando inspiração para batizar o seu novo companheiro de quatro patas? Confira estas sugestões:</p>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">Procurando inspiração para batizar o seu companheiro de quatro patas?</p>
             <div class="names-grid">
                 <div class="name-box">
                     <h4>⭐ Para Machos</h4>
@@ -98,15 +102,15 @@
             </div>
         </section>
 
-        <!-- Seção de Jogos Temáticos -->
-        <section>
+        <!-- Jogos Temáticos -->
+        <section class="card-section">
             <h2>🎮 Jogos Equestres Interativos</h2>
             <div class="games-container">
                 
                 <!-- Jogo 1: Jogo da Velha -->
                 <div class="game-card">
                     <h3>Ferradura vs Sela</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 0.8rem; color: #555;">Ferradura (🐎) contra Sela (🤠)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #555;">Ferradura (🐎) contra Sela (🤠)</p>
                     <div class="tic-tac-toe" id="board">
                         <div class="cell" onclick="makeMove(0)"></div>
                         <div class="cell" onclick="makeMove(1)"></div>
@@ -125,8 +129,8 @@
                 <!-- Jogo 2: Adivinhação -->
                 <div class="game-card">
                     <h3>Adivinhe o Número da Sorte</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 0.8rem;">Descubra o número secreto (1 a 10)</p>
-                    <div>
+                    <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #555;">Descubra o número secreto (1 a 10)</p>
+                    <div class="input-group">
                         <input type="number" id="guessInput" min="1" max="10">
                         <button class="game-btn" onclick="checkGuess()">Testar</button>
                     </div>
@@ -138,7 +142,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Projeto CAVALOOOOOOO! Desenvolvido com muita paixão e criatividade.</p>
+        <p>&copy; 2026 Projeto CAVALOOOOOOO! Desenvolvido com total paixão e estilo.</p>
     </footer>
 
     <script src="script.js"></script>
