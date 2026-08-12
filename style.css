@@ -1,3 +1,4 @@
+
 :root {
     --primary: #8B4513;     /* Marrom Couro / Terra */
     --secondary: #D2B48C;   /* Bege / Areia */
@@ -110,6 +111,31 @@ h2 {
 
 .gallery-item:hover .photo-caption {
     transform: translateY(0);
+}
+
+/* Seção de Informações / Raças */
+.breeds-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.breed-card {
+    background: #f7ede2;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.breed-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.breed-card p {
+    font-size: 0.9rem;
+    color: #443631;
 }
 
 /* Seção de Jogos */
