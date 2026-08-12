@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Filtro dinâmico por categoria de raça
+    // 1. Filtro dinâmico por tipo de raça
     const filterButtons = document.querySelectorAll('.filter-btn');
     const racaCards = document.querySelectorAll('.raca-card');
 
@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Curiosidades aleatórias
+    // 2. Curiosidades sobre cavalos
     const curiosidades = [
-        "O Mangalarga Marchador é famoso por não dar o trote (movimento saltado), mantendo sempre apoios intercalados para dar conforto ao montador.",
-        "Cavalos não conseguem respirar pela boca, apenas pelas narinas.",
-        "O olho do cavalo é um dos maiores entre os mamíferos terrestres.",
-        "Cavalos conseguem dormir tanto em pé quanto deitados.",
-        "O Clydesdale pode pesar mais de 1.000 kg e ter mais de 1,80m de altura de cernelha.",
-        "O Quarto de Milha consegue atingir até 88 km/h em distâncias curtas."
+        "O Mangalarga Marchador não troca de apoio no ar durante o andamento, o que elimina o impacto para quem está montado.",
+        "O cavalo Árabe possui uma costela e uma vértebra a menos que as outras raças de cavalos.",
+        "Cavalos usam as orelhas, narinas e olhos para comunicar emoções com outros membros do rebanho.",
+        "Os olhos do cavalo ficam nas laterais da cabeça, garantindo um campo de visão de quase 350 graus.",
+        "Cavalos conseguem travar as articulações das pernas para conseguir dormir de pé com segurança.",
+        "O Quarto de Milha possui arranque mais rápido que muitos carros esportivos em distâncias curtas."
     ];
 
     const btnFact = document.getElementById('btn-fact');
