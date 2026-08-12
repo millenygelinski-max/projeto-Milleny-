@@ -1,7 +1,7 @@
 ```css
-/* =========================================
-   CONFIGURAÇÕES GERAIS
-========================================= */
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
     margin: 0;
@@ -14,749 +14,2002 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8f3ed;
-    color: #35261d;
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #faf7f2;
+
+    color: #2f241d;
+
     line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+
+    width: 100%;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
 }
 
 
-/* =========================================
-   NAVBAR
-========================================= */
+/* =====================================================
+   CORES
+===================================================== */
 
-header {
-    position: sticky;
+:root {
+
+    --brown-dark: #2d1d14;
+
+    --brown: #68452e;
+
+    --brown-light: #a56f46;
+
+    --gold: #d29a5b;
+
+    --cream: #faf7f2;
+
+    --white: #ffffff;
+
+    --text: #30251e;
+
+    --muted: #756960;
+
+    --border: #eadfd5;
+
+    --green: #4d805e;
+
+    --red: #b94a4a;
+
+    --shadow:
+        0 18px 50px rgba(57, 36, 22, .10);
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    position: fixed;
+
     top: 0;
+    left: 0;
+
+    width: 100%;
+
     z-index: 1000;
-    background: rgba(55, 36, 24, 0.97);
+
+    background:
+        rgba(45, 29, 20, .94);
+
+    backdrop-filter:
+        blur(14px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
 }
 
 .navbar {
-    max-width: 1200px;
+
+    max-width: 1250px;
+
     margin: auto;
-    padding: 18px 25px;
+
+    padding:
+        17px 25px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
 .logo {
+
     color: white;
-    font-size: 21px;
-    font-weight: bold;
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: -.5px;
 }
 
-.menu {
+.logo span:last-child {
+
+    color: var(--gold);
+}
+
+.nav-menu {
+
+    display: flex;
+
     list-style: none;
 
-    display: flex;
-    gap: 25px;
+    gap: 28px;
 }
 
-.menu a {
-    color: #fff;
-    font-weight: 600;
-    transition: 0.3s;
+.nav-menu a {
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        .25s ease;
 }
 
-.menu a:hover {
-    color: #e6b77a;
+.nav-menu a:hover {
+
+    color: var(--gold);
+}
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    color: white;
+
+    border: 0;
+
+    font-size: 26px;
+
+    cursor: pointer;
 }
 
 
-/* =========================================
+/* =====================================================
    HERO
-========================================= */
+===================================================== */
 
 .hero {
-    min-height: 650px;
+
+    min-height: 850px;
+
+    position: relative;
 
     display: flex;
+
     align-items: center;
 
-    background:
-        linear-gradient(
-            rgba(35, 22, 14, 0.65),
-            rgba(35, 22, 14, 0.65)
-        ),
-        url("https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1800&q=80");
+    background-image:
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Mangalarga_Marchador.jpg");
 
     background-size: cover;
+
     background-position: center;
 }
 
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30,18,11,.94) 0%,
+            rgba(30,18,11,.78) 43%,
+            rgba(30,18,11,.20) 100%
+        );
+}
+
 .hero-content {
-    max-width: 1100px;
+
+    position: relative;
+
+    z-index: 2;
+
     width: 100%;
+
+    max-width: 1250px;
+
     margin: auto;
-    padding: 40px 25px;
+
+    padding: 150px 25px 80px;
 
     color: white;
 }
 
-.tag {
-    display: inline-block;
+.hero-badge {
 
-    padding: 8px 15px;
+    display: inline-flex;
 
-    border-radius: 30px;
+    padding: 8px 14px;
 
-    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
 
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+    background:
+        rgba(210,154,91,.15);
 
-.hero h1 {
-    max-width: 750px;
+    border:
+        1px solid rgba(210,154,91,.45);
 
-    font-size: clamp(42px, 7vw, 78px);
-    line-height: 1.05;
+    color:
+        #f3c78e;
 
-    margin: 20px 0;
-}
+    font-size: 12px;
 
-.hero p {
-    max-width: 650px;
-
-    font-size: 20px;
-
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-
-    background: #b87845;
-
-    color: white;
-
-    padding: 15px 25px;
-
-    border-radius: 10px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #925a32;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   SEÇÕES
-========================================= */
-
-.section {
-    max-width: 1150px;
-
-    margin: auto;
-
-    padding: 90px 25px;
-}
-
-.section-title {
-    text-align: center;
-
-    max-width: 750px;
-
-    margin: 0 auto 50px;
-}
-
-.section-title > span {
-    color: #a36b40;
-
-    font-size: 13px;
-
-    font-weight: bold;
+    font-weight: 800;
 
     letter-spacing: 1.5px;
 }
 
-.section-title h2 {
-    font-size: 42px;
+.hero h1 {
 
-    margin: 8px 0 15px;
+    max-width: 850px;
+
+    margin:
+        22px 0;
+
+    font-size:
+        clamp(48px, 7vw, 88px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
 }
 
-.section-title p {
-    color: #75685e;
+.hero h1 span {
+
+    color:
+        var(--gold);
+
+    display: block;
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    color:
+        rgba(255,255,255,.78);
+
+    font-size: 19px;
+
+    line-height: 1.75;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding:
+        0 24px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    transition:
+        .25s ease;
+}
+
+.btn-primary {
+
+    background:
+        var(--gold);
+
+    color:
+        var(--brown-dark);
+}
+
+.btn-primary:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        #e0aa6e;
+}
+
+.btn-outline {
+
+    border:
+        1px solid rgba(255,255,255,.4);
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.06);
+}
+
+.btn-outline:hover {
+
+    background:
+        rgba(255,255,255,.14);
+
+    transform:
+        translateY(-3px);
+}
+
+.hero-stats {
+
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 60px;
+}
+
+.hero-stats div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.hero-stats strong {
+
+    font-size: 30px;
+
+    color:
+        var(--gold);
+}
+
+.hero-stats span {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+.section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        100px 25px;
+}
+
+.section-heading {
+
+    max-width: 760px;
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+}
+
+.eyebrow {
+
+    display: inline-block;
+
+    color:
+        var(--brown-light);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+
+    margin:
+        10px 0 15px;
+
+    color:
+        var(--text);
+
+    font-size:
+        clamp(34px, 5vw, 52px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+.section-heading p {
+
+    color:
+        var(--muted);
 
     font-size: 17px;
+
+    line-height: 1.75;
 }
 
 
-/* =========================================
-   CARDS INFORMATIVOS
-========================================= */
+/* =====================================================
+   FEATURES
+===================================================== */
 
-.info-grid {
+.feature-grid {
+
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 20px;
+    gap: 18px;
 }
 
-.info-card {
+.feature-card {
+
+    padding: 30px;
+
     background: white;
 
-    padding: 30px 25px;
+    border:
+        1px solid var(--border);
 
-    border-radius: 18px;
-
-    border: 1px solid #eadfd5;
-
-    transition: 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-7px);
+    border-radius: 20px;
 
     box-shadow:
-        0 15px 35px
-        rgba(71, 43, 25, 0.12);
+        0 10px 30px rgba(70,45,28,.05);
+
+    transition:
+        .3s ease;
 }
 
-.icon {
-    font-size: 35px;
+.feature-card:hover {
 
-    margin-bottom: 15px;
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
 }
 
-.info-card h3 {
-    margin-bottom: 8px;
+.feature-icon {
 
-    font-size: 21px;
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background:
+        #f5e9dc;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
 }
 
-.info-card p {
-    color: #74675e;
+.feature-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.feature-card p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
 }
 
 
-/* =========================================
-   RAÇAS
-========================================= */
+/* =====================================================
+   FILTROS
+===================================================== */
 
-.races-section {
-    max-width: 1250px;
+.race-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 35px;
 }
 
-.races-grid {
+.filter-btn {
+
+    border:
+        1px solid var(--border);
+
+    background:
+        white;
+
+    color:
+        var(--muted);
+
+    padding:
+        10px 17px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+
+    background:
+        var(--brown);
+
+    color: white;
+
+    border-color:
+        var(--brown);
+}
+
+
+/* =====================================================
+   CARDS DAS RAÇAS
+===================================================== */
+
+.race-grid {
+
     display: grid;
 
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 25px;
+    gap: 24px;
 }
 
 .race-card {
+
     overflow: hidden;
 
-    background: white;
-
-    border-radius: 20px;
-
-    border: 1px solid #eadfd5;
-
-    box-shadow:
-        0 8px 25px
-        rgba(65, 40, 24, 0.07);
-
-    transition: 0.3s;
-}
-
-.race-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 15px 35px
-        rgba(65, 40, 24, 0.14);
-}
-
-.race-image {
-    height: 230px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 100px;
-
-    color: white;
-}
-
-.quarter {
     background:
-        linear-gradient(
-            135deg,
-            #80512f,
-            #c18a5a
-        );
-}
+        white;
 
-.marchador {
-    background:
-        linear-gradient(
-            135deg,
-            #65422e,
-            #a87852
-        );
-}
-
-.arabian {
-    background:
-        linear-gradient(
-            135deg,
-            #a67c52,
-            #d7b084
-        );
-}
-
-.psi {
-    background:
-        linear-gradient(
-            135deg,
-            #4c3025,
-            #936247
-        );
-}
-
-.crioulo {
-    background:
-        linear-gradient(
-            135deg,
-            #735034,
-            #b88b5d
-        );
-}
-
-.race-content {
-    padding: 27px;
-}
-
-.race-tag {
-    color: #a36b40;
-
-    font-size: 13px;
-
-    font-weight: bold;
-}
-
-.race-content h3 {
-    font-size: 27px;
-
-    margin: 7px 0;
-}
-
-.race-content > p {
-    color: #70645b;
-
-    margin-bottom: 20px;
-}
-
-.details {
-    border-top: 1px solid #eee2d8;
-
-    padding-top: 15px;
-}
-
-.details p {
-    margin: 8px 0;
-
-    font-size: 14px;
-
-    color: #5f544c;
-}
-
-
-/* =========================================
-   TABELA
-========================================= */
-
-.table-container {
-    overflow-x: auto;
-
-    background: white;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(65, 40, 24, 0.08);
-}
-
-table {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    min-width: 750px;
-}
-
-th {
-    background: #523525;
-
-    color: white;
-
-    padding: 17px;
-
-    text-align: left;
-}
-
-td {
-    padding: 17px;
-
-    border-bottom: 1px solid #eee3db;
-
-    color: #5e5149;
-}
-
-tr:hover td {
-    background: #fbf5ef;
-}
-
-
-/* =========================================
-   QUIZ
-========================================= */
-
-.quiz-section {
-    max-width: 900px;
-
-    margin: auto;
-
-    padding: 90px 25px;
-}
-
-.quiz-container,
-.quiz-result {
-    background: white;
-
-    padding: 35px;
+    border:
+        1px solid var(--border);
 
     border-radius: 24px;
 
     box-shadow:
-        0 12px 35px
-        rgba(64, 40, 24, 0.12);
+        0 12px 35px rgba(64,41,26,.07);
+
+    transition:
+        .35s ease;
 }
 
-.quiz-top {
+.race-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.race-card-image {
+
+    height: 290px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.race-card-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+}
+
+.race-card:hover img {
+
+    transform:
+        scale(1.06);
+}
+
+.race-country {
+
+    position: absolute;
+
+    top: 16px;
+    left: 16px;
+
+    padding:
+        7px 11px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(20,13,9,.72);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    backdrop-filter:
+        blur(5px);
+}
+
+.race-card-body {
+
+    padding: 28px;
+}
+
+.race-card-body h3 {
+
+    margin:
+        6px 0 10px;
+
+    font-size: 29px;
+
+    letter-spacing: -.7px;
+}
+
+.race-short {
+
+    color:
+        var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.race-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 22px;
+}
+
+.race-tag {
+
+    padding:
+        5px 9px;
+
+    border-radius: 7px;
+
+    background:
+        #f5eee7;
+
+    color:
+        var(--brown);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.race-data {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.data-box {
+
+    padding: 13px;
+
+    background:
+        #faf7f3;
+
+    border-radius: 12px;
+}
+
+.data-box small {
+
+    display: block;
+
+    color:
+        #998b81;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    font-weight: 800;
+
+    letter-spacing: .7px;
+}
+
+.data-box strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 14px;
+}
+
+.learn-more {
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+        var(--brown-light);
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    font-size: 14px;
+}
+
+.learn-more:hover {
+
+    color:
+        var(--brown);
+}
+
+
+/* =====================================================
+   SEÇÃO EXPLICATIVA
+===================================================== */
+
+.explain-section {
+
+    max-width: 1200px;
+
+    margin:
+        30px auto 100px;
+
+    padding:
+        0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.explain-image {
+
+    min-height: 550px;
+
+    border-radius: 30px;
+
+    background-image:
+        linear-gradient(
+            rgba(70,39,21,.15),
+            rgba(70,39,21,.15)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Arabian_horse.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.image-decoration {
+
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 70px;
+    height: 70px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    font-size: 35px;
+}
+
+.explain-content h2 {
+
+    margin:
+        12px 0 20px;
+
+    font-size:
+        clamp(33px, 4vw, 49px);
+
+    line-height: 1.1;
+}
+
+.explain-content p {
+
+    color:
+        var(--muted);
+
+    margin-bottom: 17px;
+
+    font-size: 16px;
+}
+
+.check-list {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.check-list div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-weight: 800;
+
+    font-size: 14px;
+}
+
+.check-list span {
+
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    color:
+        var(--green);
+
+    background:
+        #e5f1e8;
+}
+
+
+/* =====================================================
+   TABELA
+===================================================== */
+
+.comparison-wrapper {
+
+    overflow-x: auto;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(60,40,25,.06);
+}
+
+.comparison-table {
+
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse:
+        collapse;
+}
+
+.comparison-table th {
+
+    padding:
+        18px;
+
+    background:
+        var(--brown-dark);
+
+    color:
+        white;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+}
+
+.comparison-table td {
+
+    padding:
+        18px;
+
+    border-bottom:
+        1px solid #eee5de;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+}
+
+.comparison-table tr:hover td {
+
+    background:
+        #fcf8f4;
+}
+
+.comparison-table td:first-child {
+
+    color:
+        var(--text);
+
+    font-weight: 800;
+}
+
+.table-note {
+
+    margin-top: 12px;
+
+    color:
+        #8a7b71;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    grid-template-rows:
+        250px 250px;
+
+    gap: 15px;
+}
+
+.gallery-item {
+
+    margin: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        #ddd;
+}
+
+.gallery-large {
+
+    grid-row:
+        span 2;
+}
+
+.gallery-item img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+}
+
+.gallery-item:hover img {
+
+    transform:
+        scale(1.07);
+}
+
+.gallery-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 45% 0 0;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.7)
+        );
+}
+
+.gallery-item figcaption {
+
+    position: absolute;
+
+    bottom: 17px;
+    left: 17px;
+
+    z-index: 2;
+
+    color: white;
+
+    font-weight: 900;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.quiz-section {
+
+    padding:
+        110px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2d1d14,
+            #4e3221
+        );
+
+    color: white;
+}
+
+.quiz-section .section-heading {
+
+    margin-bottom:
+        45px;
+}
+
+.section-heading.light h2 {
+
+    color: white;
+}
+
+.section-heading.light p {
+
+    color:
+        rgba(255,255,255,.65);
+}
+
+.quiz-box,
+.quiz-result {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding:
+        35px;
+
+    background:
+        #fff;
+
+    color:
+        var(--text);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
+}
+
+.quiz-header {
+
     display: flex;
 
     justify-content: space-between;
 
     gap: 20px;
 
-    color: #805333;
+    color:
+        var(--brown);
 
-    font-weight: bold;
+    font-weight: 900;
 
-    margin-bottom: 12px;
+    font-size: 13px;
 }
 
-.progress-bar {
-    height: 9px;
+.quiz-progress {
 
-    background: #eadfd6;
+    height: 8px;
+
+    margin:
+        15px 0 35px;
+
+    background:
+        #eee5de;
 
     border-radius: 20px;
 
     overflow: hidden;
-
-    margin-bottom: 35px;
 }
 
-.progress {
-    width: 10%;
+.quiz-progress-bar {
 
     height: 100%;
+
+    width: 10%;
 
     background:
         linear-gradient(
             90deg,
-            #9a633d,
-            #d19a68
+            var(--brown-light),
+            var(--gold)
         );
 
-    transition: width 0.3s;
+    transition:
+        width .4s ease;
 }
 
-#question {
-    font-size: 25px;
+.question-text {
 
-    line-height: 1.4;
+    font-size:
+        clamp(22px, 4vw, 30px);
+
+    line-height: 1.35;
 
     margin-bottom: 25px;
 }
 
 .answers {
+
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        1fr 1fr;
 
-    gap: 14px;
+    gap: 12px;
 }
 
-.answer-button {
-    border: 2px solid #e4d6cb;
+.answer-btn {
 
-    background: #fff;
+    padding:
+        17px;
 
-    color: #3c2c22;
-
-    padding: 17px;
+    border:
+        2px solid var(--border);
 
     border-radius: 13px;
 
+    background:
+        #fff;
+
     text-align: left;
-
-    font-size: 16px;
-
-    font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color:
+        var(--text);
+
+    transition:
+        .2s ease;
 }
 
-.answer-button:hover:not(:disabled) {
-    border-color: #a16b45;
+.answer-btn:hover:not(:disabled) {
 
-    background: #faf1e9;
-
-    transform: translateY(-2px);
-}
-
-.answer-button.correct {
-    background: #ddf3e4;
-
-    border-color: #42a363;
-
-    color: #246a3c;
-}
-
-.answer-button.wrong {
-    background: #fae0e0;
-
-    border-color: #d25858;
-
-    color: #9d2d2d;
-}
-
-.answer-button:disabled {
-    cursor: default;
-}
-
-.feedback {
-    min-height: 30px;
-
-    margin: 20px 0;
-
-    font-weight: bold;
-}
-
-.correct-message {
-    color: #2d8a4e;
-}
-
-.wrong-message {
-    color: #bb3838;
-}
-
-.quiz-button {
-    border: none;
+    border-color:
+        var(--brown-light);
 
     background:
-        linear-gradient(
-            135deg,
-            #895a39,
-            #b6794d
-        );
+        #fcf3ea;
+
+    transform:
+        translateY(-2px);
+}
+
+.answer-btn.correct {
+
+    background:
+        #e4f4e8;
+
+    border-color:
+        #55a46d;
+
+    color:
+        #27673a;
+}
+
+.answer-btn.wrong {
+
+    background:
+        #fae5e5;
+
+    border-color:
+        #d65a5a;
+
+    color:
+        #9d3030;
+}
+
+.answer-btn:disabled {
+
+    cursor:
+        default;
+}
+
+.quiz-feedback {
+
+    min-height: 32px;
+
+    margin:
+        20px 0 10px;
+
+    font-weight: 800;
+}
+
+.feedback-correct {
+
+    color:
+        #2d8147;
+}
+
+.feedback-wrong {
+
+    color:
+        #b63838;
+}
+
+.quiz-next {
+
+    border: 0;
+
+    padding:
+        15px 23px;
+
+    border-radius: 12px;
+
+    background:
+        var(--brown);
 
     color: white;
 
-    padding: 15px 25px;
-
-    border-radius: 11px;
-
-    font-size: 16px;
-
-    font-weight: bold;
+    font-weight: 900;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    transition:
+        .25s ease;
 }
 
-.quiz-button:hover:not(:disabled) {
-    transform: translateY(-2px);
+.quiz-next:hover:not(:disabled) {
 
-    box-shadow:
-        0 7px 20px
-        rgba(100, 60, 35, 0.2);
+    background:
+        var(--brown-light);
+
+    transform:
+        translateY(-2px);
 }
 
-.quiz-button:disabled {
-    opacity: 0.45;
+.quiz-next:disabled {
 
-    cursor: not-allowed;
+    opacity: .4;
+
+    cursor:
+        not-allowed;
 }
+
+
+/* RESULTADO */
 
 .quiz-result {
+
     text-align: center;
+
+    color:
+        var(--text);
 }
 
-.result-icon {
-    font-size: 65px;
+.trophy {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
 }
 
 .quiz-result h2 {
+
     font-size: 34px;
 
     margin: 10px 0;
 }
 
+.final-score {
+
+    margin:
+        20px 0;
+
+    color:
+        var(--brown);
+}
+
+.final-score strong {
+
+    font-size: 70px;
+
+    line-height: 1;
+}
+
+.final-score span {
+
+    font-size: 25px;
+
+    color:
+        #9c8c82;
+}
+
 .quiz-result p {
-    font-size: 20px;
 
-    color: #6d6159;
-}
+    color:
+        var(--muted);
 
-.quiz-result strong {
-    color: #9a623d;
-}
+    font-size: 18px;
 
-#result-message {
-    color: #865536;
-
-    margin: 25px 0;
-}
-
-.hidden {
-    display: none !important;
+    margin-bottom: 25px;
 }
 
 
-/* =========================================
-   RODAPÉ
-========================================= */
+/* =====================================================
+   FONTES
+===================================================== */
+
+.sources-section {
+
+    padding-bottom:
+        70px;
+}
+
+.source-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+.source-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid var(--border);
+
+    background:
+        white;
+
+    border-radius: 16px;
+
+    transition:
+        .25s ease;
+}
+
+.source-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.source-card > span {
+
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        #f6ede4;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+}
+
+.source-card div {
+
+    flex: 1;
+}
+
+.source-card strong {
+
+    display: block;
+
+    color:
+        var(--text);
+}
+
+.source-card small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+}
+
+.source-card b {
+
+    color:
+        var(--brown-light);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
-    background: #332117;
+
+    background:
+        #21150f;
 
     color: white;
 
-    padding: 45px 20px;
-
-    text-align: center;
+    padding:
+        50px 25px 20px;
 }
 
-.footer-content h3 {
-    font-size: 24px;
+.footer-inner {
 
-    margin-bottom: 8px;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
 }
 
-.footer-content p {
-    color: #d3c4b8;
+.footer-logo {
+
+    font-size: 22px;
+
+    font-weight: 900;
 }
 
-.copyright {
-    margin-top: 20px;
+.footer-inner p {
+
+    max-width: 450px;
+
+    margin-top: 10px;
+
+    color:
+        rgba(255,255,255,.55);
 
     font-size: 13px;
 }
 
+.footer-links {
 
-/* =========================================
-   RESPONSIVO
-========================================= */
+    display: flex;
 
-@media (max-width: 900px) {
+    gap: 20px;
 
-    .info-grid {
+    flex-wrap: wrap;
+
+    align-content: center;
+}
+
+.footer-links a {
+
+    color:
+        rgba(255,255,255,.7);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+
+    color:
+        var(--gold);
+}
+
+.footer-bottom {
+
+    max-width: 1200px;
+
+    margin:
+        35px auto 0;
+
+    padding-top:
+        18px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color:
+        rgba(255,255,255,.4);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: none;
+
+    place-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(18,11,7,.78);
+
+    backdrop-filter:
+        blur(7px);
+}
+
+.modal.show {
+
+    display: grid;
+}
+
+.modal-content {
+
+    width: 100%;
+
+    max-width: 800px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        white;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.35);
+
+    animation:
+        modalIn .3s ease;
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(20px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0) scale(1);
+    }
+
+}
+
+.modal-close {
+
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        #f4ebe3;
+
+    color:
+        var(--brown);
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.modal-image {
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+}
+
+.modal-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.modal-content h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.modal-content h4 {
+
+    margin:
+        20px 0 7px;
+
+    color:
+        var(--brown-light);
+}
+
+.modal-content p {
+
+    color:
+        var(--muted);
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .feature-grid {
+
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-    .menu {
-        gap: 12px;
+    .explain-section {
 
-        font-size: 14px;
+        grid-template-columns:
+            1fr;
+
+        gap: 40px;
+    }
+
+    .explain-image {
+
+        min-height: 450px;
     }
 
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 
-    .navbar {
+    .menu-toggle {
+
+        display: block;
+    }
+
+    .nav-menu {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 15px;
+        right: 15px;
+
+        padding: 20px;
+
         flex-direction: column;
 
         gap: 15px;
+
+        border-radius: 15px;
+
+        background:
+            #2d1d14;
     }
 
-    .menu {
-        flex-wrap: wrap;
+    .nav-menu.open {
 
-        justify-content: center;
+        display: flex;
     }
 
     .hero {
-        min-height: 550px;
+
+        min-height: 760px;
+
+        background-position:
+            65% center;
     }
 
     .hero h1 {
-        font-size: 44px;
+
+        letter-spacing:
+            -2px;
+    }
+
+    .hero-stats {
+
+        gap: 25px;
+    }
+
+    .race-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .gallery-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        grid-template-rows:
+            220px 220px 220px;
+    }
+
+    .gallery-large {
+
+        grid-column:
+            span 2;
+
+        grid-row:
+            span 1;
+    }
+
+    .answers {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .source-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .footer-inner {
+
+        flex-direction:
+            column;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .section {
+
+        padding:
+            70px 18px;
+    }
+
+    .hero-content {
+
+        padding:
+            130px 20px 60px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            45px;
     }
 
     .hero p {
-        font-size: 17px;
+
+        font-size:
+            16px;
     }
 
-    .section {
-        padding: 65px 18px;
+    .hero-stats {
+
+        gap: 20px;
     }
 
-    .section-title h2 {
-        font-size: 33px;
+    .hero-stats strong {
+
+        font-size: 24px;
     }
 
-    .info-grid,
-    .races-grid,
-    .answers {
-        grid-template-columns: 1fr;
+    .hero-stats span {
+
+        font-size: 10px;
     }
 
-    .quiz-container,
+    .feature-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .race-card-body {
+
+        padding: 22px;
+    }
+
+    .race-data {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .gallery-grid {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+    }
+
+    .gallery-item,
+    .gallery-large {
+
+        height:
+            240px;
+    }
+
+    .quiz-box,
     .quiz-result {
-        padding: 23px;
+
+        padding:
+            23px;
     }
 
-    #question {
-        font-size: 21px;
+    .quiz-header {
+
+        font-size: 11px;
     }
 
-    .quiz-top {
-        font-size: 13px;
+    .modal-content {
+
+        padding:
+            25px 20px;
     }
 
 }
