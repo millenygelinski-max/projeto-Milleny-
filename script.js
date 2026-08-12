@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove a classe 'active' de todos os botões e adiciona no clicado
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
