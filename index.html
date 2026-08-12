@@ -3,46 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-Estar Equino</title>
+    <title>O Mundo dos Cavalos | Raças & Elegância</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>EquiVida</h1>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#pilares">Cuidados</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>O Mundo dos Cavalos</h1>
+            <p>Descubra a nobreza, a graciosidade e a história das raças mais fascinantes do planeta.</p>
+            <a href="#racas" class="btn">Explorar Raças</a>
+        </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <h2>Promovendo o Bem-Estar Equino</h2>
-        <p>Saúde, respeito e liberdade para cavalos mais felizes e saudáveis.</p>
+    <section class="about">
+        <h2>A Magia dos Equinos</h2>
+        <div class="divider"></div>
+        <p>Os cavalos acompanham a humanidade há milênios, simbolizando força, liberdade e elegância. Cada raça possui traços únicos, desde a marcha suave de raças brasileiras até a majestade dos cavalos de tiro europeus.</p>
     </section>
 
-    <main class="container" id="pilares">
-        <h2 class="section-title">Pilares do Bem-Estar</h2>
-        
-        <div class="cards-grid">
-            
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=600&q=80" alt="Cavalo pastando livremente">
-                <div class="card-content">
-                    <h3>Alimentação Natural</h3>
-                    <p>Acesso constante a pastagem ou forragem de boa qualidade é essencial para a digestão e saúde mental do cavalo.</p>
-                </div>
-            </div>
+    <section id="racas" class="racas-container">
+        <h2>Conheça as Raças</h2>
+        <div class="divider"></div>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="Cavalos socializando no pasto">
-                <div class="card-content">
-                    <h3>Socialização e Espaço</h3>
-                    <p>Cavalos são animais gregários. O contato com outros cavalos e a liberdade de movimento no pasto reduzem significativamente o estresse.</p>
-                </div>
-            </div>
+        <div class="grid-racas">
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=600&q=80" alt="Cuidado e escovação de cavalo">
-                <div class="card-content">
+            <article class="card-raca">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Cavalo Mangalarga Marchador">
+                </div>
+                <div class="card-body">
+                    <h3>Mangalarga Marchador</h3>
+                    <span class="tag">Origem: Brasil</span>
+                    <p>Orgulho nacional, o Mangalarga Marchador é famoso por sua "marcha" — um andamento suave em que o cavalo não perde o contato com o solo. É uma raça extremamente dócil, inteligente e perfeita para cavalgadas longas, garantindo conforto total ao cavaleiro.</p>
+                </div>
+            </article>
+
+            <article class="card-raca">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Cavalo Puro Sangue Árabe">
+                </div>
+                <div class="card-body">
+                    <h3>Puro Sangue Árabe</h3>
+                    <span class="tag">Origem: Península Arábica</span>
+                    <p>Uma das raças mais antigas e distintas do mundo. Reconhecido pelo perfil côncavo da cabeça, olhos grandes e cauda erguida com orgulho. É famoso por sua resistência física lendária, inteligência apurada e forte elo de afeição com os humanos.</p>
+                </div>
+            </article>
+
+            <article class="card-raca">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=800&q=80" alt="Cavalo Frísio">
+                </div>
+                <div class="card-body">
+                    <h3>Frísio (Friesian)</h3>
+                    <span class="tag">Origem: Países Baixos</span>
+                    <p>Conhecido por sua pelagem negra brilhante, crina ondulada e abundante e postura imponente. O Frísio é a definição de elegância dramática. Apesar do porte grande e poderoso, possui um temperamento dócil, sendo muito usado em adestramento clássico e no cinema.</p>
+                </div>
+            </article>
+
+            <article class="card-raca">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1518882570102-7a21ee1b0698?auto=format&fit=crop&w=800&q=80" alt="Cavalo Quarto de Milha">
+                </div>
+                <div class="card-body">
+                    <h3>Quarto de Milha</h3>
+                    <span class="tag">Origem: Estados Unidos</span>
+                    <p>Famoso por sua aceleração incrível em curtas distâncias (um quarto de milha). Possui musculatura bem desenvolvida, força e agilidade surpreendentes. É o cavalo mais versátil do mundo, sendo o favorito para provas rurais, rodeios e trabalho com gado.</p>
+                </div>
+            </article>
+
+            <article class="card-raca">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1508811328163-9563821f5791?auto=format&fit=crop&w=800&q=80" alt="Cavalo Andaluz">
+                </div>
+                <div class="card-body">
+                    <h3>Andaluz</h3>
+                    <span class="tag">Origem: Espanha</span>
+                    <p>Conhecido historicamente como o cavalo dos reis. O Andaluz possui um pescoço forte e arqueado, porte majestoso e movimentos altivos e elegantes. É um mestre da alta escola de adestramento e destaca-se por sua nobreza e temperamento equilibrado.</p>
+                </div>
+            </article>
+
+            <article class="card-raca">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1566251037378-5e04e3bec343?auto=format&fit=crop&w=800&q=80" alt="Cavalo Clydesdale">
+                </div>
+                <div class="card-body">
+                    <h3>Clydesdale</h3>
+                    <span class="tag">Origem: Escócia</span>
+                    <p>Um "gigante gentil". Esta raça de tração de grande porte é famosa pelas longas pelagens que cobrem as patas (as "plumas"). Apesar da força descomunal, são cavalos calmos, tranquilos e muito afetuosos, muito admirados em desfiles e exposições.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 O Mundo dos Cavalos — Celebrando a beleza e a nobreza equina.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
