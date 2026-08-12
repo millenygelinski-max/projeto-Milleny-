@@ -1,13 +1,18 @@
-const prefixes = ["Trovão", "Sombra", "Estrela", "Relâmpago", "Barão", "Vento", "Fogo", "Valente", "Lorde", "Apolo"];
-const suffixes = ["Dourado", "da Noite", "Selvagem", "Feroz", "do Vale", "Imperial", "Místico", "Ligeiro", "Real", "do Sol"];
+document.addEventListener("DOMContentLoaded", () => {
+    // Listas de nomes
+    const nomesIniciais = ["Mister", "Lorde", "Rainha", "Sombra", "Duque", "Guardião", "Vento", "Fogo", "Estrela", "Relâmpago"];
+    const nomesFinais = ["Selvagem", "Dourado", "do Vale", "Supremo", "Místico", "Ligeiro", "Real", "Solitário", "Nobre", "Veloz"];
 
-function generateName() {
-    const randomPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
-    const randomSuffix = suffixes[Math.floor(Math.random() * suffixes.length)];
-    const nameElement = document.getElementById("generated-name");
-    
-    nameElement.innerText = `${randomPrefix} ${randomSuffix}`;
-}
+    const nameDisplay = document.getElementById("name-display");
+    const generateBtn = document.getElementById("generate-btn");
 
-// Adiciona o evento de clique ao botão assim que o script carrega
-document.getElementById("btn-generate").addEventListener("click", generateName);
+    function geradorDeNomes() {
+        const parte1 = nomesIniciais[Math.floor(Math.random() * nomesIniciais.length)];
+        const parte2 = nomesFinais[Math.floor(Math.random() * nomesFinais.length)];
+        
+        nameDisplay.textContent = `${parte1} ${parte2}`;
+    }
+
+    // Evento de clique
+    generateBtn.addEventListener("click", geradorDeNomes);
+});
