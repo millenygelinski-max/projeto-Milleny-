@@ -123,10 +123,10 @@ h2 {
     transform: translateY(0);
 }
 
-/* Raças de Cavalos */
+/* Raças de Cavalos (Estilo Pesquisa Educativa) */
 .breeds-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -151,8 +151,9 @@ h2 {
 }
 
 .breed-card p {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: #443225;
+    margin-bottom: 0.3rem;
 }
 
 /* Ideias de Nomes */
