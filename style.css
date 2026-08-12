@@ -1,168 +1,139 @@
+:root {
+    --primary: #d4af37; /* Dourado */
+    --bg: #121212;
+    --card-bg: #1e1e1e;
+    --text: #f5f5f5;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #050510;
-  color: #fff;
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-/* Painel Lateral */
-.sidebar {
-  width: 320px;
-  background: rgba(15, 15, 35, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 10;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+/* Cabeçalho / Hero Section */
+header {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(18,18,18,1)), 
+                url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1600') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.sidebar h2 {
-  font-size: 1.4rem;
-  color: #a855f7;
+header h1 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.sidebar p {
-  font-size: 0.9rem;
-  color: #ccc;
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Containers de Seção */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-input {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: #1a1a3a;
-  color: #fff;
-  outline: none;
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
-input:focus {
-  border-color: #a855f7;
+/* Seção de Raças (Grid) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-button {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #a855f7, #6366f1);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Espaço do Universo */
-.universe {
-  flex: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background: radial-gradient(circle at center, #111133 0%, #020208 100%);
+.card-content {
+    padding: 20px;
 }
 
-/* Estrela Central (Sol) */
-.sun {
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, #ffea00, #ff6f00);
-  border-radius: 50%;
-  box-shadow: 0 0 40px #ff9100, 0 0 80px rgba(255, 145, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.85rem;
-  color: #000;
-  z-index: 5;
-  padding: 10px;
-  position: absolute;
+.card-content h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
 }
 
-/* Linha da Órbita */
-.orbit {
-  position: absolute;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  pointer-events: none;
-  animation: rotate linear infinite;
+/* Elemento Interativo: Gerador de Nomes */
+.generator-box {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--primary);
+    margin-top: 20px;
 }
 
-/* Planeta (Ideia) */
-.planet {
-  position: absolute;
-  top: -15px; /* Alinha o planeta na linha da órbita */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  pointer-events: auto;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s;
+.btn {
+    background-color: var(--primary);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
 }
 
-.planet:hover {
-  transform: translateX(-50%) scale(1.3);
-  z-index: 20;
+.btn:hover {
+    background-color: #f3ce58;
 }
 
-/* Tooltip com o Texto da Ideia */
-.planet .tooltip {
-  position: absolute;
-  bottom: 125%;
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+#generated-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #fff;
+    min-height: 40px;
 }
 
-.planet:hover .tooltip {
-  opacity: 1;
-}
-
-/* Animação de Rotação Orbital */
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a0a;
+    color: #777;
+    border-top: 1px solid #222;
 }
