@@ -3,215 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Milleny</title>
-    <style>
-        :root {
-            --primary: #ff6b8b;
-            --secondary: #ff8e53;
-            --bg-color: #f9f9f9;
-            --text-color: #333;
-            --card-bg: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        main {
-            flex: 1;
-            max-width: 1000px;
-            width: 90%;
-            margin: 2rem auto;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            text-align: center;
-        }
-
-        /* Galeria de Fotos */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            height: 200px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Seção de Jogos */
-        .games-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .game-card {
-            background: #fff5f7;
-            border: 2px dashed var(--primary);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .game-card h3 {
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        /* Jogo da Velha */
-        .tic-tac-toe {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-            width: 150px;
-            margin: 0 auto 1rem auto;
-        }
-
-        .cell {
-            width: 45px;
-            height: 45px;
-            background: white;
-            border: 1px solid #ccc;
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--primary);
-        }
-
-        .cell:hover {
-            background: #ffe6eb;
-        }
-
-        /* Jogo de Adivinhação */
-        input[type="number"] {
-            padding: 0.5rem;
-            width: 70%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 0.5rem;
-            font-size: 1rem;
-        }
-
-        button.game-btn {
-            padding: 0.5rem 1rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-
-        button.game-btn:hover {
-            background: var(--secondary);
-        }
-
-        .game-msg {
-            margin-top: 0.8rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: #333;
-            color: white;
-            margin-top: auto;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Mundo dos Cavalos - Raças Equinas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Projeto Milleny</h1>
-        <p>Bem-vindo ao meu espaço interativo com fotos e jogos!</p>
+        <h1>Mundo dos Cavalos</h1>
+        <p>Explore a beleza, a força e a diversidade das raças equinas!</p>
     </header>
 
     <main>
-        <!-- Galeria de Fotos -->
+        <!-- Galeria de Raças de Cavalos -->
         <section>
-            <h2>Minha Galeria de Fotos</h2>
+            <h2>Raças Fascinantes</h2>
             <div class="gallery-grid">
-                <!-- Dica: Substitua os links abaixo pelos links reais das suas fotos -->
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=1" alt="Foto 1"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=2" alt="Foto 2"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=3" alt="Foto 3"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=4" alt="Foto 4"></div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=400&q=80" alt="Cavalo Quarto de Milha">
+                    <div class="photo-caption">Quarto de Milha</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1598880940371-c756e015cea1?auto=format&fit=crop&w=400&q=80" alt="Cavalo Árabe">
+                    <div class="photo-caption">Árabe</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=400&q=80" alt="Cavalo Puro Sangue Inglês">
+                    <div class="photo-caption">Puro Sangue Inglês</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80" alt="Cavalo Mangalarga Marchador">
+                    <div class="photo-caption">Mangalarga Marchador</div>
+                </div>
             </div>
         </section>
 
-        <!-- Seção de Jogos -->
+        <!-- Seção de Mini-Jogos Temáticos -->
         <section>
-            <h2>Divirta-se um Pouco!</h2>
+            <h2>Desafios Equestres</h2>
             <div class="games-container">
                 
-                <!-- Jogo 1: Jogo da Velha -->
+                <!-- Jogo 1: Jogo da Velha com Ferradura e Sela -->
                 <div class="game-card">
-                    <h3>Jogo da Velha</h3>
+                    <h3>Ferradura vs Sela</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0.8rem; color: #555;">Ferradura (🐎) contra Sela (🤠)</p>
                     <div class="tic-tac-toe" id="board">
                         <div class="cell" onclick="makeMove(0)"></div>
                         <div class="cell" onclick="makeMove(1)"></div>
@@ -223,19 +57,19 @@
                         <div class="cell" onclick="makeMove(7)"></div>
                         <div class="cell" onclick="makeMove(8)"></div>
                     </div>
-                    <button class="game-btn" onclick="resetTicTacToe()">Reiniciar</button>
-                    <div class="game-msg" id="ttt-msg">Vez do X</div>
+                    <button class="game-btn" onclick="resetTicTacToe()">Recomeçar</button>
+                    <div class="game-msg" id="ttt-msg">Vez de: 🐎 (Cavalo)</div>
                 </div>
 
-                <!-- Jogo 2: Adivinhe o Número -->
+                <!-- Jogo 2: Adivinhe a Idade do Potro -->
                 <div class="game-card">
-                    <h3>Adivinhe o Número</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 0.8rem;">Escolha um número de 1 a 10</p>
+                    <h3>Adivinhe o Ano da Raça</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0.8rem;">Descubra o número secreto (1 a 10)</p>
                     <div>
                         <input type="number" id="guessInput" min="1" max="10">
-                        <button class="game-btn" onclick="checkGuess()">Enviar</button>
+                        <button class="game-btn" onclick="checkGuess()">Testar</button>
                     </div>
-                    <div class="game-msg" id="guess-msg">Tente adivinhar!</div>
+                    <div class="game-msg" id="guess-msg">Faça sua aposta!</div>
                 </div>
 
             </div>
@@ -243,97 +77,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Projeto Milleny. Criado com carinho para a web.</p>
+        <p>&copy; 2026 Projeto Raças de Cavalos. Desenvolvido com paixão pela equinocultura.</p>
     </footer>
 
-    <script>
-        /* --- Lógica do Jogo da Velha --- */
-        let board = ['', '', '', '', '', '', '', '', ''];
-        let currentPlayer = 'X';
-        let isGameActive = true;
-
-        function makeMove(index) {
-            if (board[index] === '' && isGameActive) {
-                board[index] = currentPlayer;
-                document.getElementsByClassName('cell')[index].innerText = currentPlayer;
-                
-                checkWinner();
-                if (isGameActive) {
-                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-                    document.getElementById('ttt-msg').innerText = `Vez do ${currentPlayer}`;
-                }
-            }
-        }
-
-        function checkWinner() {
-            const winningConditions = [
-                [0, 1, 2], [3, 4, 5], [6, 7, 8], // Linhas
-                [0, 3, 6], [1, 4, 7], [2, 5, 8], // Colunas
-                [0, 4, 8], [2, 4, 6]            // Diagonais
-            ];
-
-            let roundWon = false;
-            for (let i = 0; i < winningConditions.length; i++) {
-                const [a, b, c] = winningConditions[i];
-                if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-                    roundWon = true;
-                    break;
-                }
-            }
-
-            if (roundWon) {
-                document.getElementById('ttt-msg').innerText = `Jogador ${currentPlayer} Venceu! 🎉`;
-                isGameActive = false;
-                return;
-            }
-
-            if (!board.includes('')) {
-                document.getElementById('ttt-msg').innerText = `Empate! 🤝`;
-                isGameActive = false;
-            }
-        }
-
-        function resetTicTacToe() {
-            board = ['', '', '', '', '', '', '', '', ''];
-            currentPlayer = 'X';
-            isGameActive = true;
-            document.getElementById('ttt-msg').innerText = 'Vez do X';
-            const cells = document.getElementsByClassName('cell');
-            for (let i = 0; i < cells.length; i++) {
-                cells[i].innerText = '';
-            }
-        }
-
-        /* --- Lógica do Jogo de Adivinhação --- */
-        let secretNumber = Math.floor(Math.random() * 10) + 1;
-
-        function checkGuess() {
-            const userGuess = parseInt(document.getElementById('guessInput').value);
-            const msg = document.getElementById('guess-msg');
-
-            if (!userGuess || userGuess < 1 || userGuess > 10) {
-                msg.innerText = 'Digite um número entre 1 e 10!';
-                msg.style.color = 'red';
-                return;
-            }
-
-            if (userGuess === secretNumber) {
-                msg.innerText = 'Parabéns! Você acertou! 🎯';
-                msg.style.color = 'green';
-                setTimeout(() => {
-                    secretNumber = Math.floor(Math.random() * 10) + 1;
-                    msg.innerText = 'Novo número gerado! Tente novamente.';
-                    msg.style.color = '#333';
-                    document.getElementById('guessInput').value = '';
-                }, 3000);
-            } else if (userGuess < secretNumber) {
-                msg.innerText = 'Muito baixo! Tente um número maior ⬆️';
-                msg.style.color = '#d97706';
-            } else {
-                msg.innerText = 'Muito alto! Tente um número menor ⬇️';
-                msg.style.color = '#d97706';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
