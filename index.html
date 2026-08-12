@@ -3,49 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Equino | Guia Interativo de Raças</title>
+    <title>Imperium Equino | O Enciclopédia das Raças</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>MUNDO EQUINO</h1>
-            <p>Descubra a nobreza, a força e a beleza das maiores raças de cavalos do mundo.</p>
-            <a href="#catalogo" class="btn-primary">Explorar Raças</a>
+    <nav class="navbar">
+        <div class="logo">IMPERIUM <span>EQUINO</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#racas">Raças</a></li>
+            <li><a href="#comparativo">Comparativo</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-card">
+            <span class="tag">Mundo Majestoso</span>
+            <h1>A Grandeza dos Cavalos</h1>
+            <p>Conheça as raças mais impressionantes, históricas e velozes do planeta em uma experiência interativa.</p>
+            <a href="#racas" class="btn-primary">Explorar o Catálogo</a>
         </div>
     </header>
 
-    <main id="catalogo" class="container">
-        <section class="controls-section">
-            <h2>Conheça as Raças</h2>
-            <div class="filter-wrapper">
-                <input type="text" id="searchInput" placeholder="Busque por nome...">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-category="todos">Todos</button>
-                    <button class="filter-btn" data-category="velocidade">Velocidade</button>
-                    <button class="filter-btn" data-category="forca">Força</button>
-                    <button class="filter-btn" data-category="porte">Grande Porte</button>
+    <section id="racas" class="container">
+        <div class="section-header">
+            <h2>Galeria de Raças</h2>
+            <p>Filtre por aptidão ou pesquise diretamente pelo nome da raça.</p>
+        </div>
+
+        <div class="controls-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Pesquisar raça (ex: Árabe, Frísio)...">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="todos">Todas</button>
+                <button class="filter-btn" data-filter="sela">Sela & Salto</button>
+                <button class="filter-btn" data-filter="tracao">Trabalho & Tração</button>
+                <button class="filter-btn" data-filter="velocidade">Corrida</button>
+            </div>
+        </div>
+
+        <div class="grid-racas" id="gridRacas">
+            </div>
+    </section>
+
+    <section id="comparativo" class="container highlight-section">
+        <div class="section-header">
+            <h2>Comparativo de Atributos</h2>
+            <p>Veja os pontos fortes de cada raça lado a lado.</p>
+        </div>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Raça</th>
+                        <th>Velocidade</th>
+                        <th>Força</th>
+                        <th>Agilidade</th>
+                        <th>Temperamento</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaComparativa">
+                    </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="curiosidades" class="container">
+        <div class="section-header">
+            <h2>Fatos Incríveis sobre os Equinos</h2>
+            <p>Coisas que você provavelmente não sabia sobre esses animais.</p>
+        </div>
+        <div class="accordion-wrapper">
+            <div class="accordion-item">
+                <button class="accordion-header">Visão de quase 360 graus <span>+</span></button>
+                <div class="accordion-content">
+                    <p>Devido à posição dos olhos nas laterais da cabeça, os cavalos conseguem enxergar quase tudo ao seu redor, exceto diretamente atrás e logo à frente do focinho.</p>
                 </div>
             </div>
-        </section>
-
-        <section class="grid-racas" id="racasGrid">
-            </section>
-    </main>
+            <div class="accordion-item">
+                <button class="accordion-header">Memória de longo prazo incrível <span>+</span></button>
+                <div class="accordion-content">
+                    <p>Estudos indicam que os cavalos conseguem reconhecer rostos humanos e lembrar de pessoas que os trataram bem (ou mal) mesmo após anos de separação.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Eles dormem de pé! <span>+</span></button>
+                <div class="accordion-content">
+                    <p>Graças a um sistema especial de travamento de seus tendões e ligamentos nas patas, os cavalos conseguem relaxar os músculos e cochilar em pé sem cair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div id="modalRaca" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div id="modalBody">
-                </div>
+        <div class="modal-card">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div id="modalDetails"></div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Mundo Equino. Desenvolvido para amantes de cavalos.</p>
+        <p>&copy; 2026 Imperium Equino — Celebrando a nobreza dos cavalos com estilo.</p>
     </footer>
 
     <script src="script.js"></script>
