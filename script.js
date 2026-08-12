@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Filtro dinâmico por tipo de raça
+    // 1. Filtro por Categoria de Raça de Cavalo
     const filterButtons = document.querySelectorAll('.filter-btn');
     const racaCards = document.querySelectorAll('.raca-card');
 
@@ -21,14 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Curiosidades sobre cavalos
+    // 2. Fatos Curiosos sobre Cavalos
     const curiosidades = [
-        "O Mangalarga Marchador não troca de apoio no ar durante o andamento, o que elimina o impacto para quem está montado.",
-        "O cavalo Árabe possui uma costela e uma vértebra a menos que as outras raças de cavalos.",
-        "Cavalos usam as orelhas, narinas e olhos para comunicar emoções com outros membros do rebanho.",
-        "Os olhos do cavalo ficam nas laterais da cabeça, garantindo um campo de visão de quase 350 graus.",
-        "Cavalos conseguem travar as articulações das pernas para conseguir dormir de pé com segurança.",
-        "O Quarto de Milha possui arranque mais rápido que muitos carros esportivos em distâncias curtas."
+        "O Mangalarga Marchador possui um andamento suave onde o cavaleiro quase não sente impacto na sela.",
+        "A raça Puro Sangue Árabe possui uma costela e uma vértebra a menos em relação às outras raças.",
+        "Cavalos conseguem dormir em pé graças a um mecanismo de trava nos ligamentos e articulações das pernas.",
+        "O olho do cavalo é um dos maiores entre os mamíferos terrestres e oferece uma visão de quase 360 graus.",
+        "O cavalo Quarto de Milha atinge acelerações altíssimas em distâncias curtas de até 400 metros."
     ];
 
     const btnFact = document.getElementById('btn-fact');
