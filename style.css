@@ -1,150 +1,763 @@
-/* Configurações Globais */
+```css
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f3ed;
+    color: #35261d;
     line-height: 1.6;
 }
 
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: 0 auto;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Cabeçalho */
+
+/* =========================================
+   NAVBAR
+========================================= */
+
 header {
-    background: #6c5ce7;
-    color: #fff;
-    padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    background: rgba(55, 36, 24, 0.97);
 }
 
-header .container {
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header nav a {
+.logo {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
     color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-header nav a:hover {
-    color: #dfe6e9;
+.menu a:hover {
+    color: #e6b77a;
 }
 
-/* Seções */
-section {
-    padding: 4rem 0;
-}
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    color: white;
-    text-align: center;
-    padding: 6rem 0;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(35, 22, 14, 0.65),
+            rgba(35, 22, 14, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.hero-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 40px 25px;
+
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    max-width: 750px;
+
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+
+    margin: 20px 0;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    max-width: 650px;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
 }
 
-/* Botões */
 .btn {
-    background: #fff;
-    color: #6c5ce7;
-    padding: 10px 25px;
-    border-radius: 25px;
-    text-decoration: none;
+    display: inline-block;
+
+    background: #b87845;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
     font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #dfe6e9;
+    background: #925a32;
     transform: translateY(-2px);
 }
 
-.btn-small {
-    display: inline-block;
-    background: #6c5ce7;
-    color: #fff;
-    padding: 6px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 15px;
-    font-size: 0.9rem;
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 25px;
 }
 
-/* Grade de Projetos */
-.projects h2, .about h2 {
+.section-title {
     text-align: center;
-    margin-bottom: 2.5rem;
-    color: #2d3436;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
 }
 
-.project-grid {
+.section-title > span {
+    color: #a36b40;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+
+    margin: 8px 0 15px;
+}
+
+.section-title p {
+    color: #75685e;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   CARDS INFORMATIVOS
+========================================= */
+
+.info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
 }
 
-.card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+.info-card {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid #eadfd5;
+
+    transition: 0.3s;
 }
 
-.card:hover {
+.info-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(71, 43, 25, 0.12);
+}
+
+.icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 21px;
+}
+
+.info-card p {
+    color: #74675e;
+}
+
+
+/* =========================================
+   RAÇAS
+========================================= */
+
+.races-section {
+    max-width: 1250px;
+}
+
+.races-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.race-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #eadfd5;
+
+    box-shadow:
+        0 8px 25px
+        rgba(65, 40, 24, 0.07);
+
+    transition: 0.3s;
+}
+
+.race-card:hover {
     transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(65, 40, 24, 0.14);
 }
 
-/* Rodapé */
-footer {
-    background: #2d3436;
-    color: #fff;
+.race-image {
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+
+    color: white;
+}
+
+.quarter {
+    background:
+        linear-gradient(
+            135deg,
+            #80512f,
+            #c18a5a
+        );
+}
+
+.marchador {
+    background:
+        linear-gradient(
+            135deg,
+            #65422e,
+            #a87852
+        );
+}
+
+.arabian {
+    background:
+        linear-gradient(
+            135deg,
+            #a67c52,
+            #d7b084
+        );
+}
+
+.psi {
+    background:
+        linear-gradient(
+            135deg,
+            #4c3025,
+            #936247
+        );
+}
+
+.crioulo {
+    background:
+        linear-gradient(
+            135deg,
+            #735034,
+            #b88b5d
+        );
+}
+
+.race-content {
+    padding: 27px;
+}
+
+.race-tag {
+    color: #a36b40;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.race-content h3 {
+    font-size: 27px;
+
+    margin: 7px 0;
+}
+
+.race-content > p {
+    color: #70645b;
+
+    margin-bottom: 20px;
+}
+
+.details {
+    border-top: 1px solid #eee2d8;
+
+    padding-top: 15px;
+}
+
+.details p {
+    margin: 8px 0;
+
+    font-size: 14px;
+
+    color: #5f544c;
+}
+
+
+/* =========================================
+   TABELA
+========================================= */
+
+.table-container {
+    overflow-x: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(65, 40, 24, 0.08);
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 750px;
+}
+
+th {
+    background: #523525;
+
+    color: white;
+
+    padding: 17px;
+
+    text-align: left;
+}
+
+td {
+    padding: 17px;
+
+    border-bottom: 1px solid #eee3db;
+
+    color: #5e5149;
+}
+
+tr:hover td {
+    background: #fbf5ef;
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-section {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+.quiz-container,
+.quiz-result {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(64, 40, 24, 0.12);
+}
+
+.quiz-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #805333;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    height: 9px;
+
+    background: #eadfd6;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 35px;
+}
+
+.progress {
+    width: 10%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9a633d,
+            #d19a68
+        );
+
+    transition: width 0.3s;
+}
+
+#question {
+    font-size: 25px;
+
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+}
+
+.answers {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+.answer-button {
+    border: 2px solid #e4d6cb;
+
+    background: #fff;
+
+    color: #3c2c22;
+
+    padding: 17px;
+
+    border-radius: 13px;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.answer-button:hover:not(:disabled) {
+    border-color: #a16b45;
+
+    background: #faf1e9;
+
+    transform: translateY(-2px);
+}
+
+.answer-button.correct {
+    background: #ddf3e4;
+
+    border-color: #42a363;
+
+    color: #246a3c;
+}
+
+.answer-button.wrong {
+    background: #fae0e0;
+
+    border-color: #d25858;
+
+    color: #9d2d2d;
+}
+
+.answer-button:disabled {
+    cursor: default;
+}
+
+.feedback {
+    min-height: 30px;
+
+    margin: 20px 0;
+
+    font-weight: bold;
+}
+
+.correct-message {
+    color: #2d8a4e;
+}
+
+.wrong-message {
+    color: #bb3838;
+}
+
+.quiz-button {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #895a39,
+            #b6794d
+        );
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.quiz-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px
+        rgba(100, 60, 35, 0.2);
+}
+
+.quiz-button:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+.quiz-result {
     text-align: center;
-    padding: 3rem 0;
 }
 
-footer .social-icons {
-    margin: 1.5rem 0;
+.result-icon {
+    font-size: 65px;
 }
 
-footer .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s;
+.quiz-result h2 {
+    font-size: 34px;
+
+    margin: 10px 0;
 }
 
-footer .social-icons a:hover {
-    color: #6c5ce7;
+.quiz-result p {
+    font-size: 20px;
+
+    color: #6d6159;
 }
 
-.copy {
-    font-size: 0.85rem;
-    color: #b2bec3;
-    margin-top: 1rem;
+.quiz-result strong {
+    color: #9a623d;
 }
+
+#result-message {
+    color: #865536;
+
+    margin: 25px 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    background: #332117;
+
+    color: white;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    color: #d3c4b8;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 900px) {
+
+    .info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .menu {
+        gap: 12px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 65px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 33px;
+    }
+
+    .info-grid,
+    .races-grid,
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-container,
+    .quiz-result {
+        padding: 23px;
+    }
+
+    #question {
+        font-size: 21px;
+    }
+
+    .quiz-top {
+        font-size: 13px;
+    }
+
+}
+```
