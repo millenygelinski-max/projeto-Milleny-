@@ -3,56 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Equestre | Experiência Interativa</title>
+    <title>Santuário Equestre</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Mundo Equestre</h1>
-        <p>A força, a graciosidade e a fascinante história dos animais que moldaram a civilização.</p>
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Santuário Equestre</h1>
+            <p>Conectando você ao nobre universo dos cavalos</p>
+        </div>
     </header>
 
-    <section class="container">
-        <h2>Raças Fascinantes</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?q=80&w=800" alt="Puro Sangue Árabe">
-                <div class="card-content">
-                    <h3>Puro Sangue Árabe</h3>
-                    <p>Uma das raças mais antigas do mundo, reconhecida por sua inteligência, porte elegante e incrível resistência em longas distâncias.</p>
-                </div>
-            </div>
+    <main class="main-container">
+        <section class="section">
+            <h2 class="section-title">Conheça as Raças</h2>
+            <div class="cards-wrapper">
+                
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?q=80&w=800" alt="Cavalo Árabe">
+                    <div class="card-info">
+                        <h3>Puro Sangue Árabe</h3>
+                        <p>Resistência incomparável, cabeça esculpida e uma das linhagens mais antigas do planeta.</p>
+                    </div>
+                </article>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800" alt="Frísio">
-                <div class="card-content">
-                    <h3>Frísio (Friesian)</h3>
-                    <p>Originário da Holanda, é famoso por sua pelagem negra e brilhante, crina abundante e movimentos altivos e imponentes.</p>
-                </div>
-            </div>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800" alt="Cavalo Frísio">
+                    <div class="card-info">
+                        <h3>Frísio</h3>
+                        <p>Famoso pela crina longa e pelagem reluzente, exala elegância e imponência por onde passa.</p>
+                    </div>
+                </article>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?q=80&w=800" alt="Quarto de Milha">
-                <div class="card-content">
-                    <h3>Quarto de Milha</h3>
-                    <p>Famoso por sua aceleração rápida em curtas distâncias, inteligência e extrema versatilidade em esportes de montaria.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?q=80&w=800" alt="Cavalo Quarto de Milha">
+                    <div class="card-info">
+                        <h3>Quarto de Milha</h3>
+                        <p>O rei da velocidade em curtas distâncias, conhecido por sua força, agilidade e inteligência.</p>
+                    </div>
+                </article>
 
-    <section class="container">
-        <h2>Gerador de Nomes para Cavalos</h2>
-        <div class="generator-box">
-            <p>Precisa de inspiração para batizar um cavalo? Clique no botão abaixo!</p>
-            <div id="generated-name">---</div>
-            <button class="btn" id="btn-generate">Gerar Nome Criativo</button>
-        </div>
-    </section>
+            </div>
+        </section>
+
+        <section class="section interactive-section">
+            <h2 class="section-title">Gerador de Nomes Equestres</h2>
+            <div class="interactive-card">
+                <p>Clique no botão para criar um nome forte e marcante para o seu cavalo:</p>
+                <div class="result-box" id="name-display">Aguardando geração...</div>
+                <button id="generate-btn" class="custom-button">Gerar Nome</button>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; Projetado para amantes da natureza e da vida equestre.</p>
+        <p>© Santuário Equestre • Paixão por Cavalos</p>
     </footer>
 
     <script src="script.js"></script>
