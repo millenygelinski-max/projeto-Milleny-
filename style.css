@@ -1,8 +1,9 @@
 :root {
-    --primary: #ff6b8b;
-    --secondary: #ff8e53;
-    --bg-color: #f9f9f9;
-    --text-color: #333;
+    --primary: #8B4513;     /* Marrom Couro / Terra */
+    --secondary: #D2B48C;   /* Bege / Areia */
+    --accent: #CD853F;      /* Marrom Claro */
+    --bg-color: #fdfbf7;    /* Fundo creme bem suave */
+    --text-color: #2c221e;  /* Marrom escuro para texto */
     --card-bg: #ffffff;
 }
 
@@ -23,16 +24,17 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, #5c2c16, var(--primary));
     color: white;
     text-align: center;
     padding: 2.5rem 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 
 header p {
@@ -54,7 +56,8 @@ section {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.08);
+    border: 1px solid #f0e6dc;
 }
 
 h2 {
@@ -64,17 +67,18 @@ h2 {
     text-align: center;
 }
 
-/* Galeria de Fotos */
+/* Galeria de Fotos de Cavalos */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .gallery-item {
+    position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
     height: 200px;
 }
 
@@ -82,11 +86,30 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(92, 44, 22, 0.85);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.4rem;
+    transform: translateY(100%);
     transition: transform 0.3s ease;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.1);
+.gallery-item:hover .photo-caption {
+    transform: translateY(0);
 }
 
 /* Seção de Jogos */
@@ -97,53 +120,57 @@ h2 {
 }
 
 .game-card {
-    background: #fff5f7;
-    border: 2px dashed var(--primary);
+    background: #fcf9f5;
+    border: 2px dashed var(--accent);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
 }
 
 .game-card h3 {
-    margin-bottom: 1rem;
-    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
-/* Jogo da Velha */
+/* Jogo da Velha Equestre */
 .tic-tac-toe {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    width: 150px;
+    gap: 6px;
+    width: 160px;
     margin: 0 auto 1rem auto;
 }
 
 .cell {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background: white;
-    border: 1px solid #ccc;
-    font-size: 1.5rem;
-    font-weight: bold;
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--primary);
 }
 
 .cell:hover {
-    background: #ffe6eb;
+    background: #f7ede2;
 }
 
-/* Jogo de Adivinhação */
+/* Formulários e Botões */
 input[type="number"] {
     padding: 0.5rem;
-    width: 70%;
-    border: 1px solid #ccc;
+    width: 65%;
+    border: 1px solid var(--secondary);
     border-radius: 5px;
     margin-right: 0.5rem;
     font-size: 1rem;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary);
 }
 
 button.game-btn {
@@ -158,7 +185,7 @@ button.game-btn {
 }
 
 button.game-btn:hover {
-    background: var(--secondary);
+    background: #5c2c16;
 }
 
 .game-msg {
@@ -170,8 +197,8 @@ button.game-btn:hover {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background: #333;
-    color: white;
+    background: #2c221e;
+    color: #d2b48c;
     margin-top: auto;
     font-size: 0.9rem;
 }
