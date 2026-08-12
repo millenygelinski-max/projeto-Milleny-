@@ -1,96 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones (FontAwesome opcional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-```html
-<!-- ============================= -->
-<!-- QUIZ DOS CAVALOS -->
-<!-- ============================= -->
-
-<section id="quiz" class="quiz-section">
-
-    <div class="quiz-header">
-        <span class="quiz-label">🎮 TESTE SEUS CONHECIMENTOS</span>
-
-        <h2>Quiz dos Cavalos</h2>
-
-        <p>
-            Responda às perguntas e descubra quanto você aprendeu!
-        </p>
-    </div>
-
-    <div id="quiz-container" class="quiz-container">
-
-        <!-- Barra de progresso -->
-        <div class="quiz-top">
-
-            <span id="question-number">
-                Pergunta 1 de 10
-            </span>
-
-            <span id="score">
-                Pontuação: 0
-            </span>
-
+    <!-- Cabeçalho / Navegação -->
+    <header>
+        <div class="container">
+            <h1>Meu Projeto</h1>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Barra -->
-        <div class="progress-bar">
-            <div id="progress" class="progress"></div>
+    <!-- Seção Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Bem-vinda ao meu site!</h2>
+            <p>Este é o meu espaço onde compartilho meus projetos e evoluções na programação.</p>
+            <a href="#projetos" class="btn">Ver Projetos</a>
         </div>
+    </section>
 
-        <!-- Pergunta -->
-        <h3 id="question">
-            Qual raça é conhecida por sua famosa marcha?
-        </h3>
-
-        <!-- Alternativas -->
-        <div id="answers" class="answers"></div>
-
-        <!-- Mensagem -->
-        <div id="feedback" class="feedback"></div>
-
-        <!-- Botão próxima -->
-        <button
-            id="next-button"
-            class="quiz-button"
-            type="button"
-            disabled
-        >
-            Próxima pergunta →
-        </button>
-
-    </div>
-
-
-    <!-- RESULTADO -->
-
-    <div id="quiz-result" class="quiz-result hidden">
-
-        <div class="result-icon">
-            🏆
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Adicione aqui uma breve descrição sobre quem você é, quais são suas paixões na tecnologia e o que você estuda.</p>
         </div>
+    </section>
 
-        <h2>Quiz concluído!</h2>
+    <!-- Seção de Projetos -->
+    <section id="projetos" class="projects">
+        <div class="container">
+            <h2>Meus Trabalhos</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>Projeto 1</h3>
+                    <p>Breve descrição sobre o que o projeto faz.</p>
+                    <a href="#" target="_blank" class="btn-small">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Projeto 2</h3>
+                    <p>Breve descrição sobre o que o projeto faz.</p>
+                    <a href="#" target="_blank" class="btn-small">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="result-text">
-            Você acertou
-            <strong id="final-score">0</strong>
-            de
-            <strong id="total-questions">10</strong>
-            perguntas.
-        </p>
+    <!-- Rodapé / Contato -->
+    <footer id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo através das redes sociais abaixo:</p>
+            <div class="social-icons">
+                <a href="https://github.com/millenygelinski-max" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copy">&copy; 2026 - Desenvolvido por Milleny Gelinski.</p>
+        </div>
+    </footer>
 
-        <h3 id="result-message">
-            Muito bem!
-        </h3>
-
-        <button
-            id="restart-button"
-            class="quiz-button"
-            type="button"
-        >
-            🔄 Jogar novamente
-        </button>
-
-    </div>
-
-</section>
-```
+    <script src="script.js"></script>
+</body>
+</html>
