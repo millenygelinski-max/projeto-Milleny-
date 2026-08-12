@@ -3,173 +3,766 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAVALOOOOOOO! - O Mundo Majestoso dos Equinos</title>
+
+    <title>Mundo dos Cavalos | Raças e Curiosidades</title>
+
+    <meta
+        name="description"
+        content="Conheça cinco incríveis raças de cavalos, suas origens, características, temperamentos e principais usos."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <h1>🐎 CAVALOOOOOOO! 🐎</h1>
-            <p>O universo fascinante das raças, origens, características e muita diversão equina!</p>
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="#inicio" class="logo">
+            <span class="logo-icon">🐎</span>
+            <span>Mundo dos Cavalos</span>
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#racas">Raças</a>
+            <a href="#comparacao">Comparação</a>
+            <a href="#quiz">Quiz</a>
+
+        </nav>
+
+        <div class="header-buttons">
+
+            <button class="theme-btn" id="themeBtn" aria-label="Alterar tema">
+                🌙
+            </button>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+                ☰
+            </button>
+
         </div>
+
     </header>
 
+
     <main>
-        <!-- Galeria Oficial de Raças (100% Cavalos) -->
-        <section class="card-section">
-            <h2>📸 Galeria Oficial: As 5 Raças Majestosas</h2>
-            <p class="section-subtitle">Passe o mouse para revelar a raça</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=600&q=80" alt="Mangalarga Marchador">
-                    <div class="photo-caption">Mangalarga Marchador</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1598880940371-c756e015cea1?auto=format&fit=crop&w=600&q=80" alt="Quarto de Milha">
-                    <div class="photo-caption">Quarto de Milha</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=600&q=80" alt="Cavalo Árabe">
-                    <div class="photo-caption">Cavalo Árabe</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Puro-Sangue Inglês">
-                    <div class="photo-caption">Puro-Sangue Inglês</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=600&q=80" alt="Cavalo Crioulo">
-                    <div class="photo-caption">Cavalo Crioulo</div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Detalhes Completos das 5 Raças (Pesquisa Pedida) -->
-        <section class="card-section">
-            <h2>📖 Conhecendo a Fundo as Raças de Cavalos</h2>
-            <div class="breeds-container">
-                
-                <div class="breed-card">
-                    <h3>1. Quarto de Milha</h3>
-                    <p><strong>Origem:</strong> Estados Unidos.</p>
-                    <p><strong>Características:</strong> Extremamente musculoso, peito largo e garupa poderosa para arrancadas velozes.</p>
-                    <p><strong>Tamanho:</strong> 1,45m a 1,60m | <strong>Pelagem:</strong> Castanho, alazão, baio, etc.</p>
-                    <p><strong>Temperamento:</strong> Dócil, ágil e inteligente.</p>
-                    <p><strong>Principais Usos:</strong> Trabalho com gado e provas de velocidade.</p>
-                </div>
+        <!-- ================= HERO ================= -->
 
-                <div class="breed-card">
-                    <h3>2. Mangalarga Marchador</h3>
-                    <p><strong>Origem:</strong> Brasil (Sul de Minas Gerais).</p>
-                    <p><strong>Características:</strong> Cavalo de sela brasileiro por excelência, elegante e de tronco harmonioso.</p>
-                    <p><strong>Tamanho:</strong> 1,47m a 1,57m | <strong>Pelagem:</strong> Castanha, alazã, tordilha, preta.</p>
-                    <p><strong>Temperamento:</strong> Extremamente dócil e corajoso.</p>
-                    <p><strong>Principais Usos:</strong> Lazer, cavalgadas e marcha cômoda.</p>
-                </div>
+        <section class="hero" id="inicio">
 
-                <div class="breed-card">
-                    <h3>3. Cavalo Árabe</h3>
-                    <p><strong>Origem:</strong> Oriente Médio (Península Arábica).</p>
-                    <p><strong>Características:</strong> Cabeça com perfil côncavo, olhos grandes e cauda erguida com elegância.</p>
-                    <p><strong>Tamanho:</strong> 1,45m a 1,55m | <strong>Pelagem:</strong> Predominantemente tordilha, castanha e alazã.</p>
-                    <p><strong>Temperamento:</strong> Altamente inteligente e curioso.</p>
-                    <p><strong>Principais Usos:</strong> Enduro equestre e exposições de beleza.</p>
-                </div>
+            <div class="hero-content">
 
-                <div class="breed-card">
-                    <h3>4. Puro-Sangue Inglês (PSI)</h3>
-                    <p><strong>Origem:</strong> Inglaterra.</p>
-                    <p><strong>Características:</strong> Corpo esbelto, pernas longas e grande capacidade pulmonar.</p>
-                    <p><strong>Tamanho:</strong> 1,60m a 1,70m | <strong>Pelagem:</strong> Alazã, castanha, tordilha e preta.</p>
-                    <p><strong>Temperamento:</strong> Muito enérgico, alerta e sensível.</p>
-                    <p><strong>Principais Usos:</strong> Corridas de cavalo (turfe) e salto.</p>
-                </div>
+                <span class="hero-tag">🐴 ENCICLOPÉDIA EQUESTRE</span>
 
-                <div class="breed-card">
-                    <h3>5. Cavalo Crioulo</h3>
-                    <p><strong>Origem:</strong> América do Sul (Argentina, Uruguai, Brasil).</p>
-                    <p><strong>Características:</strong> Estrutura óssea robusta, feita para suportar o frio e intempéries.</p>
-                    <p><strong>Tamanho:</strong> 1,40m a 1,50m | <strong>Pelagem:</strong> Lobuna, baia, gateada, etc.</p>
-                    <p><strong>Temperamento:</strong> Resistente, sóbrio e leal.</p>
-                    <p><strong>Principais Usos:</strong> Lida com gado e provas como o Freio de Ouro.</p>
+                <h1>
+                    Descubra o
+                    <span>mundo dos cavalos</span>
+                </h1>
+
+                <p>
+                    Conheça cinco das mais fascinantes raças de cavalos,
+                    suas origens, características, temperamentos e os
+                    trabalhos para os quais foram desenvolvidas.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#racas" class="btn btn-primary">
+                        Explorar raças
+                        <span>→</span>
+                    </a>
+
+                    <a href="#quiz" class="btn btn-outline">
+                        Fazer o quiz
+                    </a>
+
                 </div>
 
             </div>
-        </section>
 
-        <!-- Ideias de Nomes -->
-        <section class="card-section">
-            <h2>💡 Ideias de Nomes para o seu Cavalo</h2>
-            <p class="section-subtitle">Procurando inspiração para batizar o seu companheiro de quatro patas?</p>
-            <div class="names-grid">
-                <div class="name-box">
-                    <h4>⭐ Para Machos</h4>
-                    <ul>
-                        <li>Trovão</li>
-                        <li>Falcão</li>
-                        <li>Zorro</li>
-                        <li>Sultão</li>
-                        <li>Tempestade</li>
-                        <li>Gavião</li>
-                    </ul>
+            <div class="hero-image">
+
+                <div class="hero-image-overlay"></div>
+
+                <div class="hero-card">
+
+                    <span>VOCÊ SABIA?</span>
+
+                    <strong>
+                        Existem centenas de raças de cavalos
+                        reconhecidas no mundo.
+                    </strong>
+
+                    <small>
+                        Cada uma possui características próprias.
+                    </small>
+
                 </div>
-                <div class="name-box">
-                    <h4>✨ Para Fêmeas</h4>
-                    <ul>
-                        <li>Bella</li>
-                        <li>Esperança</li>
-                        <li>Estrela</li>
-                        <li>Princess</li>
-                        <li>Chuva</li>
-                        <li>Esmeralda</li>
-                    </ul>
-                </div>
+
             </div>
+
         </section>
 
-        <!-- Jogos Temáticos -->
-        <section class="card-section">
-            <h2>🎮 Jogos Equestres Interativos</h2>
-            <div class="games-container">
-                
-                <!-- Jogo 1: Jogo da Velha -->
-                <div class="game-card">
-                    <h3>Ferradura vs Sela</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #555;">Ferradura (🐎) contra Sela (🤠)</p>
-                    <div class="tic-tac-toe" id="board">
-                        <div class="cell" onclick="makeMove(0)"></div>
-                        <div class="cell" onclick="makeMove(1)"></div>
-                        <div class="cell" onclick="makeMove(2)"></div>
-                        <div class="cell" onclick="makeMove(3)"></div>
-                        <div class="cell" onclick="makeMove(4)"></div>
-                        <div class="cell" onclick="makeMove(5)"></div>
-                        <div class="cell" onclick="makeMove(6)"></div>
-                        <div class="cell" onclick="makeMove(7)"></div>
-                        <div class="cell" onclick="makeMove(8)"></div>
+
+        <!-- ================= SOBRE ================= -->
+
+        <section class="section about" id="sobre">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">SOBRE OS CAVALOS</span>
+
+                <h2>
+                    Muito mais que velocidade
+                </h2>
+
+                <p>
+                    Os cavalos acompanham os seres humanos há milhares de anos.
+                    Durante esse período, diferentes características foram
+                    selecionadas para criar animais adaptados a diferentes
+                    ambientes e atividades.
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <article class="info-box">
+                    <div class="info-icon">🌎</div>
+                    <h3>História</h3>
+                    <p>
+                        Cavalos foram utilizados para transporte, agricultura,
+                        guerras, esportes e atividades de lazer.
+                    </p>
+                </article>
+
+                <article class="info-box">
+                    <div class="info-icon">💪</div>
+                    <h3>Força</h3>
+                    <p>
+                        Algumas raças foram selecionadas principalmente pela
+                        força, resistência e capacidade de trabalhar.
+                    </p>
+                </article>
+
+                <article class="info-box">
+                    <div class="info-icon">⚡</div>
+                    <h3>Velocidade</h3>
+                    <p>
+                        Raças como o Quarto de Milha e o Puro-Sangue Inglês
+                        são famosas por sua capacidade atlética.
+                    </p>
+                </article>
+
+                <article class="info-box">
+                    <div class="info-icon">❤️</div>
+                    <h3>Companheirismo</h3>
+                    <p>
+                        Com manejo adequado, cavalos podem desenvolver
+                        relações de confiança com seus cuidadores.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RAÇAS ================= -->
+
+        <section class="section breeds-section" id="racas">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">CONHEÇA AS RAÇAS</span>
+
+                <h2>
+                    Cinco cavalos extraordinários
+                </h2>
+
+                <p>
+                    Clique em uma raça para descobrir mais informações.
+                </p>
+
+            </div>
+
+
+            <!-- Busca -->
+
+            <div class="search-container">
+
+                <span>🔎</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Pesquisar uma raça..."
+                    aria-label="Pesquisar raça"
+                >
+
+            </div>
+
+
+            <div class="breeds-grid" id="breedsGrid">
+
+
+                <!-- QUARTO DE MILHA -->
+
+                <article
+                    class="breed-card"
+                    data-name="quarto de milha"
+                    data-origin="Estados Unidos"
+                >
+
+                    <div class="breed-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=1000&q=85"
+                            alt="Cavalo representando o Quarto de Milha"
+                            loading="lazy"
+                        >
+
+                        <span class="breed-number">01</span>
+
                     </div>
-                    <button class="game-btn" onclick="resetTicTacToe()">Recomeçar</button>
-                    <div class="game-msg" id="ttt-msg">Vez de: 🐎 (Cavalo)</div>
+
+                    <div class="breed-content">
+
+                        <span class="country">🇺🇸 ESTADOS UNIDOS</span>
+
+                        <h3>Quarto de Milha</h3>
+
+                        <p>
+                            Conhecido por sua velocidade em distâncias curtas,
+                            força e grande versatilidade.
+                        </p>
+
+                        <div class="breed-tags">
+                            <span>⚡ Velocidade</span>
+                            <span>🐄 Gado</span>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-breed="quarter"
+                        >
+                            Ver detalhes →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MANGALARGA -->
+
+                <article
+                    class="breed-card"
+                    data-name="mangalarga marchador"
+                    data-origin="Brasil"
+                >
+
+                    <div class="breed-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1000&q=85"
+                            alt="Cavalo representando o Mangalarga Marchador"
+                            loading="lazy"
+                        >
+
+                        <span class="breed-number">02</span>
+
+                    </div>
+
+                    <div class="breed-content">
+
+                        <span class="country">🇧🇷 BRASIL</span>
+
+                        <h3>Mangalarga Marchador</h3>
+
+                        <p>
+                            Raça brasileira famosa por sua marcha confortável,
+                            resistência e capacidade para longas cavalgadas.
+                        </p>
+
+                        <div class="breed-tags">
+                            <span>🇧🇷 Brasileira</span>
+                            <span>🏇 Marcha</span>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-breed="mangalarga"
+                        >
+                            Ver detalhes →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ÁRABE -->
+
+                <article
+                    class="breed-card"
+                    data-name="árabe arabe"
+                    data-origin="Oriente Médio"
+                >
+
+                    <div class="breed-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=1000&q=85"
+                            alt="Cavalo representando a raça Árabe"
+                            loading="lazy"
+                        >
+
+                        <span class="breed-number">03</span>
+
+                    </div>
+
+                    <div class="breed-content">
+
+                        <span class="country">🏜️ ORIENTE MÉDIO</span>
+
+                        <h3>Árabe</h3>
+
+                        <p>
+                            Uma das raças mais antigas e influentes,
+                            famosa por sua resistência e elegância.
+                        </p>
+
+                        <div class="breed-tags">
+                            <span>🏜️ Resistência</span>
+                            <span>✨ Elegância</span>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-breed="arabian"
+                        >
+                            Ver detalhes →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PURO SANGUE -->
+
+                <article
+                    class="breed-card"
+                    data-name="puro sangue ingles puro-sangue inglês thoroughbred"
+                    data-origin="Inglaterra"
+                >
+
+                    <div class="breed-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1534773728080-33d31da27ae5?auto=format&fit=crop&w=1000&q=85"
+                            alt="Cavalo representando o Puro-Sangue Inglês"
+                            loading="lazy"
+                        >
+
+                        <span class="breed-number">04</span>
+
+                    </div>
+
+                    <div class="breed-content">
+
+                        <span class="country">🇬🇧 INGLATERRA</span>
+
+                        <h3>Puro-Sangue Inglês</h3>
+
+                        <p>
+                            Cavalo atlético desenvolvido principalmente para
+                            corridas e conhecido por sua velocidade.
+                        </p>
+
+                        <div class="breed-tags">
+                            <span>🏇 Corridas</span>
+                            <span>⚡ Atlético</span>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-breed="thoroughbred"
+                        >
+                            Ver detalhes →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CRIOULO -->
+
+                <article
+                    class="breed-card"
+                    data-name="crioulo"
+                    data-origin="América do Sul"
+                >
+
+                    <div class="breed-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551884831-ddc8c12e3f0a?auto=format&fit=crop&w=1000&q=85"
+                            alt="Cavalo representando a raça Crioula"
+                            loading="lazy"
+                        >
+
+                        <span class="breed-number">05</span>
+
+                    </div>
+
+                    <div class="breed-content">
+
+                        <span class="country">🌎 AMÉRICA DO SUL</span>
+
+                        <h3>Crioulo</h3>
+
+                        <p>
+                            Cavalo resistente e rústico, muito importante
+                            para a cultura e o trabalho no campo.
+                        </p>
+
+                        <div class="breed-tags">
+                            <span>🌾 Trabalho</span>
+                            <span>💪 Resistência</span>
+                        </div>
+
+                        <button
+                            class="details-btn"
+                            data-breed="crioulo"
+                        >
+                            Ver detalhes →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="no-results" id="noResults">
+                <span>🐴</span>
+                <h3>Nenhuma raça encontrada</h3>
+                <p>Tente pesquisar outro nome.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= COMPARAÇÃO ================= -->
+
+        <section class="section comparison" id="comparacao">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">COMPARE</span>
+
+                <h2>
+                    As raças lado a lado
+                </h2>
+
+                <p>
+                    Veja rapidamente algumas das principais diferenças.
+                </p>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Raça</th>
+                            <th>Origem</th>
+                            <th>Característica</th>
+                            <th>Principal uso</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>🐎 Quarto de Milha</td>
+                            <td>🇺🇸 EUA</td>
+                            <td>Velocidade e força</td>
+                            <td>Trabalho com gado</td>
+                        </tr>
+
+                        <tr>
+                            <td>🇧🇷 Mangalarga Marchador</td>
+                            <td>🇧🇷 Brasil</td>
+                            <td>Marcha confortável</td>
+                            <td>Cavalgadas</td>
+                        </tr>
+
+                        <tr>
+                            <td>🏜️ Árabe</td>
+                            <td>Oriente Médio</td>
+                            <td>Resistência</td>
+                            <td>Enduro</td>
+                        </tr>
+
+                        <tr>
+                            <td>🏇 Puro-Sangue Inglês</td>
+                            <td>🇬🇧 Inglaterra</td>
+                            <td>Velocidade</td>
+                            <td>Corridas</td>
+                        </tr>
+
+                        <tr>
+                            <td>🌾 Crioulo</td>
+                            <td>América do Sul</td>
+                            <td>Rusticidade</td>
+                            <td>Trabalho com gado</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUIZ ================= -->
+
+        <section class="section quiz-section" id="quiz">
+
+            <div class="quiz-container">
+
+                <div class="quiz-header">
+
+                    <span class="eyebrow">🎮 TESTE SEUS CONHECIMENTOS</span>
+
+                    <h2>
+                        Quiz dos Cavalos
+                    </h2>
+
+                    <p>
+                        Responda às perguntas e descubra quanto você aprendeu!
+                    </p>
+
                 </div>
 
-                <!-- Jogo 2: Adivinhação -->
-                <div class="game-card">
-                    <h3>Adivinhe o Número da Sorte</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #555;">Descubra o número secreto (1 a 10)</p>
-                    <div class="input-group">
-                        <input type="number" id="guessInput" min="1" max="10">
-                        <button class="game-btn" onclick="checkGuess()">Testar</button>
+                <div class="quiz-progress">
+
+                    <div class="progress-text">
+                        <span id="questionNumber">Pergunta 1</span>
+                        <span id="scoreText">Pontuação: 0</span>
                     </div>
-                    <div class="game-msg" id="guess-msg">Faça sua aposta na pista!</div>
+
+                    <div class="progress-bar">
+                        <div id="progress"></div>
+                    </div>
+
+                </div>
+
+                <div id="quizContent">
+
+                    <h3 id="question">
+                        Qual raça é conhecida por sua famosa marcha?
+                    </h3>
+
+                    <div
+                        class="answers"
+                        id="answers"
+                    ></div>
+
+                    <button
+                        class="next-btn"
+                        id="nextBtn"
+                        disabled
+                    >
+                        Próxima pergunta →
+                    </button>
+
+                </div>
+
+                <div
+                    class="quiz-result"
+                    id="quizResult"
+                    hidden
+                >
+
+                    <div class="result-icon">🏆</div>
+
+                    <h3>Quiz concluído!</h3>
+
+                    <p id="resultText"></p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="restartQuiz"
+                    >
+                        Jogar novamente
+                    </button>
+
                 </div>
 
             </div>
+
         </section>
+
+
+        <!-- ================= CURIOSIDADES ================= -->
+
+        <section class="section facts">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">VOCÊ SABIA?</span>
+
+                <h2>
+                    Curiosidades incríveis
+                </h2>
+
+            </div>
+
+            <div class="facts-grid">
+
+                <article class="fact-card">
+
+                    <span>🐴</span>
+
+                    <h3>Visão</h3>
+
+                    <p>
+                        Os cavalos possuem olhos grandes e um campo de visão
+                        muito amplo, uma característica importante para animais
+                        que na natureza precisam perceber predadores.
+                    </p>
+
+                </article>
+
+                <article class="fact-card">
+
+                    <span>🧠</span>
+
+                    <h3>Inteligência</h3>
+
+                    <p>
+                        Cavalos conseguem aprender comandos, reconhecer
+                        padrões e associar experiências a determinadas
+                        situações.
+                    </p>
+
+                </article>
+
+                <article class="fact-card">
+
+                    <span>🏃</span>
+
+                    <h3>Atletas naturais</h3>
+
+                    <p>
+                        Diferentes raças foram selecionadas ao longo da
+                        história para velocidade, resistência, força ou
+                        agilidade.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Projeto CAVALOOOOOOO! Desenvolvido com foco educacional e muito estilo.</p>
+
+    <!-- ================= MODAL ================= -->
+
+    <div
+        class="modal"
+        id="breedModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a href="#inicio" class="logo footer-logo">
+                    <span class="logo-icon">🐎</span>
+                    <span>Mundo dos Cavalos</span>
+                </a>
+
+                <p>
+                    Um projeto educativo para conhecer melhor
+                    o fascinante mundo dos cavalos.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Navegação</h4>
+
+                <a href="#sobre">Sobre</a>
+                <a href="#racas">Raças</a>
+                <a href="#comparacao">Comparação</a>
+                <a href="#quiz">Quiz</a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Mundo dos Cavalos — Projeto educativo
+        </div>
+
     </footer>
 
+
     <script src="script.js"></script>
+
 </body>
 </html>
