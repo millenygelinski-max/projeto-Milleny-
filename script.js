@@ -1,41 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const ideaInput = document.getElementById('ideaInput');
+  const addBtn = document.getElementById('addBtn');
+  const universe = document.getElementById('universe');
 
-    // 1. Filtro por Categoria de Raça de Cavalo
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const racaCards = document.querySelectorAll('.raca-card');
+  // Cores espaciais para os planetas
+  const planetColors = [
+    '#38bdf8', '#f43f5e', '#a855f7', '#34d399', 
+    '#fbbf24', '#fb7185', '#818cf8', '#2dd4bf'
+  ];
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+  let orbitDistance = 140; // Distância inicial do Sol
 
-            const filterValue = button.getAttribute('data-filter');
+  function createPlanet() {
+    const text = ideaInput.value.trim();
 
-            racaCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
+    if (text === '') {
+      alert('Por favor, digite uma ideia antes de adicionar!');
+      return;
+    }
 
-    // 2. Fatos Curiosos sobre Cavalos
-    const curiosidades = [
-        "O Mangalarga Marchador possui um andamento suave onde o cavaleiro quase não sente impacto na sela.",
-        "A raça Puro Sangue Árabe possui uma costela e uma vértebra a menos em relação às outras raças.",
-        "Cavalos conseguem dormir em pé graças a um mecanismo de trava nos ligamentos e articulações das pernas.",
-        "O olho do cavalo é um dos maiores entre os mamíferos terrestres e oferece uma visão de quase 360 graus.",
-        "O cavalo Quarto de Milha atinge acelerações altíssimas em distâncias curtas de até 400 metros."
-    ];
+    // 1. Criar o elemento da Órbita
+    const orbit = document.createElement('div');
+    orbit.className = 'orbit';
+    
+    // Define o tamanho do anel de órbita
+    const orbitSize = orbitDistance * 2;
+    orbit.style.width = `${orbitSize}px`;
+    orbit.style.height = `${orbitSize}px`;
 
-    const btnFact = document.getElementById('btn-fact');
-    const factText = document.getElementById('fact-text');
+    // Velocidade aleatória de rotação (entre 10s e 30s)
+    const duration = Math.floor(Math.random() * 20) + 10;
+    orbit.style.animationDuration = `${duration}s`;
 
-    btnFact.addEventListener('click', () => {
-        const randomIndex = Math.floor(Math.random() * curiosidades.length);
-        factText.textContent = curiosidades[randomIndex];
-    });
+    // 2. Criar o Planeta
+    const planet = document.createElement('div');
+    planet.className = 'planet';
 
+    // Tamanho e cor aleatórios para o planeta
+    const planetSize = Math.floor(Math.random() * 15) + 20; // Entre 20px e 35px
+    const randomColor = planetColors[Math.floor(Math.random() * planetColors.length)];
+
+    planet.style.width = `${planetSize}px`;
+    planet.style.height = `${planetSize}px`;
+    planet.style.backgroundColor = randomColor;
+    planet.style.boxShadow = `0 0 15px ${randomColor}`;
+
+    // 3. Criar a Tooltip com o texto da ideia
+    const tooltip = document.createElement('div');
+    tooltip.className = 'tooltip';
+    tooltip.innerText = text;
+
+    // Montar a estrutura
+    planet.appendChild(tooltip);
+    orbit.appendChild(planet);
+    universe.appendChild(orbit);
+
+    // Aumenta a distância para a próxima órbita não sobrepor totalmente a anterior
+    orbitDistance += 50;
+
+    // Limpar o campo de texto
+    ideaInput.value = '';
+  }
+
+  // Eventos de clique e tecla Enter
+  addBtn.addEventListener('click', createPlanet);
+
+  ideaInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      createPlanet();
+    }
+  });
 });
