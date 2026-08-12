@@ -1,77 +1,664 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto</title>
+
+    <title>Cavalos e suas Raças</title>
+
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones (FontAwesome opcional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- Cabeçalho / Navegação -->
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
     <header>
-        <div class="container">
-            <h1>Meu Projeto</h1>
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🐴 Cavalos & Raças
+            </div>
+
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#racas">Raças</a></li>
+                <li><a href="#comparacao">Comparação</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+        </nav>
+
     </header>
 
-    <!-- Seção Principal (Hero) -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h2>Bem-vinda ao meu site!</h2>
-            <p>Este é o meu espaço onde compartilho meus projetos e evoluções na programação.</p>
-            <a href="#projetos" class="btn">Ver Projetos</a>
-        </div>
-    </section>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>Adicione aqui uma breve descrição sobre quem você é, quais são suas paixões na tecnologia e o que você estuda.</p>
-        </div>
-    </section>
+    <!-- =========================
+         INÍCIO
+    ========================== -->
 
-    <!-- Seção de Projetos -->
-    <section id="projetos" class="projects">
-        <div class="container">
-            <h2>Meus Trabalhos</h2>
-            <div class="project-grid">
-                <div class="card">
-                    <h3>Projeto 1</h3>
-                    <p>Breve descrição sobre o que o projeto faz.</p>
-                    <a href="#" target="_blank" class="btn-small">Acessar</a>
-                </div>
-                <div class="card">
-                    <h3>Projeto 2</h3>
-                    <p>Breve descrição sobre o que o projeto faz.</p>
-                    <a href="#" target="_blank" class="btn-small">Acessar</a>
-                </div>
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <span class="tag">
+                    🐎 PROJETO EDUCATIVO
+                </span>
+
+                <h1>
+                    O fascinante mundo dos cavalos
+                </h1>
+
+                <p>
+                    Conheça a história, as características e
+                    os principais usos de algumas das raças
+                    de cavalos mais conhecidas.
+                </p>
+
+                <a href="#racas" class="btn">
+                    Conhecer as raças
+                </a>
+
             </div>
-        </div>
-    </section>
 
-    <!-- Rodapé / Contato -->
-    <footer id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo através das redes sociais abaixo:</p>
-            <div class="social-icons">
-                <a href="https://github.com/millenygelinski-max" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+
+        <section id="sobre" class="section">
+
+            <div class="section-title">
+
+                <span>🐴 SOBRE OS CAVALOS</span>
+
+                <h2>
+                    Animais incríveis
+                </h2>
+
+                <p>
+                    Os cavalos são animais que acompanham os seres
+                    humanos há milhares de anos. Eles foram utilizados
+                    no transporte, no trabalho, na agricultura, no
+                    esporte e também no lazer.
+                </p>
+
             </div>
-            <p class="copy">&copy; 2026 - Desenvolvido por Milleny Gelinski.</p>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <div class="icon">🌎</div>
+
+                    <h3>História</h3>
+
+                    <p>
+                        Os cavalos tiveram grande importância no
+                        desenvolvimento de diferentes sociedades.
+                    </p>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="icon">💪</div>
+
+                    <h3>Força</h3>
+
+                    <p>
+                        São animais fortes e capazes de realizar
+                        atividades que exigem resistência e agilidade.
+                    </p>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="icon">🏇</div>
+
+                    <h3>Esportes</h3>
+
+                    <p>
+                        Participam de diversas modalidades esportivas,
+                        como corridas e provas equestres.
+                    </p>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="icon">❤️</div>
+
+                    <h3>Companheirismo</h3>
+
+                    <p>
+                        Quando bem cuidados, podem desenvolver uma
+                        relação de confiança com as pessoas.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RAÇAS
+        ========================== -->
+
+        <section id="racas" class="section races-section">
+
+            <div class="section-title">
+
+                <span>🐎 PRINCIPAIS RAÇAS</span>
+
+                <h2>
+                    Conheça cinco raças
+                </h2>
+
+                <p>
+                    Cada raça possui características próprias,
+                    como origem, aparência, temperamento e
+                    diferentes formas de utilização.
+                </p>
+
+            </div>
+
+
+            <div class="races-grid">
+
+
+                <!-- QUARTO DE MILHA -->
+
+                <article class="race-card">
+
+                    <div class="race-image quarter">
+                        🐎
+                    </div>
+
+                    <div class="race-content">
+
+                        <span class="race-tag">
+                            🇺🇸 Estados Unidos
+                        </span>
+
+                        <h3>Quarto de Milha</h3>
+
+                        <p>
+                            Conhecido pela velocidade, força,
+                            inteligência e grande versatilidade.
+                        </p>
+
+                        <div class="details">
+
+                            <p>
+                                <strong>📏 Altura:</strong>
+                                aproximadamente 1,50 m
+                            </p>
+
+                            <p>
+                                <strong>🎨 Pelagem:</strong>
+                                diversas cores, incluindo alazã,
+                                baia, castanha, tordilha e preta.
+                            </p>
+
+                            <p>
+                                <strong>❤️ Temperamento:</strong>
+                                geralmente dócil, inteligente e
+                                adaptável.
+                            </p>
+
+                            <p>
+                                <strong>🏇 Uso:</strong>
+                                corridas, trabalho com gado,
+                                provas esportivas e lazer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MANGALARGA -->
+
+                <article class="race-card">
+
+                    <div class="race-image marchador">
+                        🐴
+                    </div>
+
+                    <div class="race-content">
+
+                        <span class="race-tag">
+                            🇧🇷 Brasil
+                        </span>
+
+                        <h3>Mangalarga Marchador</h3>
+
+                        <p>
+                            Raça brasileira reconhecida principalmente
+                            pela marcha confortável e resistência.
+                        </p>
+
+                        <div class="details">
+
+                            <p>
+                                <strong>📏 Tamanho:</strong>
+                                porte médio.
+                            </p>
+
+                            <p>
+                                <strong>🎨 Pelagem:</strong>
+                                apresenta diferentes cores.
+                            </p>
+
+                            <p>
+                                <strong>❤️ Temperamento:</strong>
+                                ativo, dócil e resistente.
+                            </p>
+
+                            <p>
+                                <strong>🏇 Uso:</strong>
+                                cavalgadas, provas de marcha,
+                                lazer e trabalho no campo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ÁRABE -->
+
+                <article class="race-card">
+
+                    <div class="race-image arabian">
+                        🐎
+                    </div>
+
+                    <div class="race-content">
+
+                        <span class="race-tag">
+                            🌎 Oriente Médio
+                        </span>
+
+                        <h3>Cavalo Árabe</h3>
+
+                        <p>
+                            Uma das raças mais conhecidas do mundo,
+                            famosa por sua resistência e elegância.
+                        </p>
+
+                        <div class="details">
+
+                            <p>
+                                <strong>📏 Tamanho:</strong>
+                                geralmente de porte médio.
+                            </p>
+
+                            <p>
+                                <strong>🎨 Pelagem:</strong>
+                                pode apresentar várias cores,
+                                incluindo tordilha, alazã e castanha.
+                            </p>
+
+                            <p>
+                                <strong>❤️ Temperamento:</strong>
+                                inteligente, atento e enérgico.
+                            </p>
+
+                            <p>
+                                <strong>🏇 Uso:</strong>
+                                enduro, esporte, reprodução
+                                e cavalgadas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PSI -->
+
+                <article class="race-card">
+
+                    <div class="race-image psi">
+                        🏇
+                    </div>
+
+                    <div class="race-content">
+
+                        <span class="race-tag">
+                            🇬🇧 Inglaterra
+                        </span>
+
+                        <h3>Puro-Sangue Inglês</h3>
+
+                        <p>
+                            Conhecido principalmente por sua
+                            velocidade e capacidade atlética.
+                        </p>
+
+                        <div class="details">
+
+                            <p>
+                                <strong>📏 Tamanho:</strong>
+                                porte médio a grande.
+                            </p>
+
+                            <p>
+                                <strong>🎨 Pelagem:</strong>
+                                principalmente castanha,
+                                alazã, tordilha e preta.
+                            </p>
+
+                            <p>
+                                <strong>❤️ Temperamento:</strong>
+                                energético, sensível e atlético.
+                            </p>
+
+                            <p>
+                                <strong>🏇 Uso:</strong>
+                                principalmente corridas
+                                e esportes equestres.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CRIOULO -->
+
+                <article class="race-card">
+
+                    <div class="race-image crioulo">
+                        🐴
+                    </div>
+
+                    <div class="race-content">
+
+                        <span class="race-tag">
+                            🇧🇷 América do Sul
+                        </span>
+
+                        <h3>Cavalo Crioulo</h3>
+
+                        <p>
+                            Conhecido por sua resistência, rusticidade
+                            e adaptação ao trabalho no campo.
+                        </p>
+
+                        <div class="details">
+
+                            <p>
+                                <strong>📏 Tamanho:</strong>
+                                porte médio.
+                            </p>
+
+                            <p>
+                                <strong>🎨 Pelagem:</strong>
+                                apresenta diversas cores e padrões.
+                            </p>
+
+                            <p>
+                                <strong>❤️ Temperamento:</strong>
+                                resistente, ativo e confiável.
+                            </p>
+
+                            <p>
+                                <strong>🏇 Uso:</strong>
+                                trabalho com gado, cavalgadas,
+                                provas e atividades rurais.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMPARAÇÃO
+        ========================== -->
+
+        <section id="comparacao" class="section">
+
+            <div class="section-title">
+
+                <span>📊 COMPARAÇÃO</span>
+
+                <h2>
+                    Compare as raças
+                </h2>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Raça</th>
+                            <th>Origem</th>
+                            <th>Característica</th>
+                            <th>Principal uso</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Quarto de Milha</td>
+                            <td>Estados Unidos</td>
+                            <td>Velocidade e versatilidade</td>
+                            <td>Esporte e trabalho</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mangalarga Marchador</td>
+                            <td>Brasil</td>
+                            <td>Marcha e resistência</td>
+                            <td>Cavalgadas e provas</td>
+                        </tr>
+
+                        <tr>
+                            <td>Árabe</td>
+                            <td>Oriente Médio</td>
+                            <td>Resistência</td>
+                            <td>Enduro e esporte</td>
+                        </tr>
+
+                        <tr>
+                            <td>Puro-Sangue Inglês</td>
+                            <td>Inglaterra</td>
+                            <td>Velocidade</td>
+                            <td>Corridas</td>
+                        </tr>
+
+                        <tr>
+                            <td>Crioulo</td>
+                            <td>América do Sul</td>
+                            <td>Rusticidade</td>
+                            <td>Trabalho rural</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUIZ
+        ========================== -->
+
+        <section id="quiz" class="quiz-section">
+
+            <div class="section-title">
+
+                <span>🎮 TESTE SEUS CONHECIMENTOS</span>
+
+                <h2>
+                    Quiz dos Cavalos
+                </h2>
+
+                <p>
+                    Responda às perguntas e descubra
+                    quanto você aprendeu.
+                </p>
+
+            </div>
+
+
+            <div id="quiz-container" class="quiz-container">
+
+                <div class="quiz-top">
+
+                    <span id="question-number">
+                        Pergunta 1 de 10
+                    </span>
+
+                    <span id="score">
+                        Pontuação: 0
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress">
+                    </div>
+
+                </div>
+
+
+                <h3 id="question"></h3>
+
+
+                <div
+                    id="answers"
+                    class="answers">
+                </div>
+
+
+                <div
+                    id="feedback"
+                    class="feedback">
+                </div>
+
+
+                <button
+                    id="next-button"
+                    class="quiz-button"
+                    type="button"
+                    disabled>
+
+                    Próxima pergunta →
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div
+                id="quiz-result"
+                class="quiz-result hidden">
+
+                <div class="result-icon">
+                    🏆
+                </div>
+
+                <h2>
+                    Quiz concluído!
+                </h2>
+
+                <p>
+                    Você acertou
+                    <strong id="final-score">0</strong>
+                    de
+                    <strong id="total-questions">10</strong>
+                    perguntas.
+                </p>
+
+                <h3 id="result-message"></h3>
+
+                <button
+                    id="restart-button"
+                    class="quiz-button"
+                    type="button">
+
+                    🔄 Jogar novamente
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>🐴 Cavalos & Raças</h3>
+
+            <p>
+                Site educativo sobre cavalos e suas principais raças.
+            </p>
+
+            <p class="copyright">
+                © 2026 - Projeto Educativo
+            </p>
+
         </div>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
+```
