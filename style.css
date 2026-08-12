@@ -1,182 +1,121 @@
-/* Configurações Gerais */
-:root {
-  --primary-color: #2c5e3b; /* Verde natural */
-  --accent-color: #d97724;  /* Tom terracota */
-  --bg-color: #faf8f5;      /* Creme suave */
-  --text-color: #333333;
-  --card-bg: #ffffff;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+    background-color: #f4f6f0;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #2d4a22;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
+header h1 {
+    font-size: 1.5rem;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-  color: var(--accent-color);
+    color: #a8d59d;
 }
 
-/* Hero Banner */
+/* Banner Principal */
 .hero {
-  background: linear-gradient(rgba(44, 94, 59, 0.7), rgba(0, 0, 0, 0.6)), 
-              url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
 }
 
-/* Botões */
-.btn {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: white;
-  padding: 0.8rem 1.8rem;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #b8601a;
-  transform: translateY(-2px);
-}
-
-.btn-alt {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.8rem 1.8rem;
-  border-radius: 25px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1rem;
-  transition: background 0.3s;
-}
-
-.btn-alt:hover {
-  background-color: #1e4229;
-}
-
-/* Secção e Cards */
+/* Seção de Conteúdo */
 .container {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  text-align: center;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
-.container h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
+.section-title {
+    text-align: center;
+    color: #2d4a22;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .card {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
 }
 
-.card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Secção Interativa */
-.interactive-section {
-  background-color: #e8f0e9;
-  padding: 3rem 1.5rem;
-  border-radius: 12px;
-  margin: 3rem auto;
-  max-width: 900px;
+.card-content {
+    padding: 1.5rem;
 }
 
-#dica-texto {
-  font-size: 1.1rem;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
+.card-content h3 {
+    color: #2d4a22;
+    margin-bottom: 0.5rem;
 }
 
 /* Rodapé */
 footer {
-  background-color: #1a1a1a;
-  color: #888;
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+    background-color: #1b2e15;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }
