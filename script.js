@@ -76,7 +76,7 @@ function checkGuess() {
         setTimeout(() => {
             secretNumber = Math.floor(Math.random() * 10) + 1;
             msg.innerText = 'Novo desafio gerado! Faça sua aposta.';
-            msg.style.color = '#2b1d14';
+            msg.style.color = '#261810';
             document.getElementById('guessInput').value = '';
         }, 3000);
     } else if (userGuess < secretNumber) {
