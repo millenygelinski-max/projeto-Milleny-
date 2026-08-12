@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo dos Cavalos - Raças e Cuidados</title>
+    <title>Mundo dos Cavalos - Guia Completo de Raças</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -16,7 +16,6 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#origem">Sobre</a></li>
                 <li><a href="#racas">Raças</a></li>
                 <li><a href="#cuidados">Cuidados</a></li>
                 <li><a href="#curiosidades">Curiosidades</a></li>
@@ -26,124 +25,104 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h2>A Nobreza e a Força dos Cavalos</h2>
-            <p>Conheça em detalhes as principais raças, história e os cuidados fundamentais do universo equino.</p>
-            <a href="#racas" class="btn">Conhecer Raças</a>
+            <h2>Guia das Raças Equinas</h2>
+            <p>Conheça as características, história e fotos reais das raças de cavalos mais famosas do mundo.</p>
+            <a href="#racas" class="btn">Ver Raças</a>
         </div>
     </section>
 
     <main class="container">
-        <section id="origem" class="card-section">
-            <h2>Origem e Biologia</h2>
-            <p>O cavalo moderno (<em>Equus caballus</em>) evoluiu ao longo de aproximadamente 50 milhões de anos. São animais herbívoros não ruminantes, com sentidos apurados e forte comportamento social em manadas.</p>
-            
-            <div class="info-grid">
-                <div class="info-box">
-                    <h3>Alimentação</h3>
-                    <p>Necessitam de uma dieta rica em fibras (feno e pastagem fresca) e água limpa em abundância.</p>
-                </div>
-                <div class="info-box">
-                    <h3>Comportamento</h3>
-                    <p>Por serem animais de presa, possuem reflexos de fuga aguçados e linguagem corporal expressiva.</p>
-                </div>
-                <div class="info-box">
-                    <h3>Comunicação</h3>
-                    <p>Comunicam-se por relinchos, posição de orelhas e expressão facial com o restante da manada.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
         <section id="racas">
-            <h2>5 Raças Incríveis de Cavalos</h2>
-            <p class="subtitle">Filtre por tipo de aptidão:</p>
+            <h2>Raças de Cavalos</h2>
+            <p class="subtitle">Filtre as raças por aptidão:</p>
 
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Todas</button>
-                <button class="filter-btn" data-filter="trabalho">Trabalho / Velocidade</button>
+                <button class="filter-btn" data-filter="trabalho">Trabalho / Lida</button>
                 <button class="filter-btn" data-filter="elegancia">Elegância / Porte</button>
-                <button class="filter-btn" data-filter="forca">Força de Carga</button>
+                <button class="filter-btn" data-filter="forca">Força / Tração</button>
             </div>
 
             <div class="racas-grid">
+                
                 <div class="raca-card" data-category="trabalho">
-                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Cavalo Mangalarga Marchador" class="card-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Mangalarga_Marchador_tordilho.jpg/800px-Mangalarga_Marchador_tordilho.jpg" alt="Foto de Cavalo Mangalarga Marchador" class="card-img">
                     <div class="card-body">
                         <h3>Mangalarga Marchador</h3>
-                        <p>Raça brasileira de porte médio. Destaca-se por seu andamento em "marcha", que proporciona uma cavalgada extremamente macia e confortável, perfeita para longas jornadas no campo.</p>
-                        <span class="badge">Nacional / Trabalho</span>
+                        <p>Raça genuinamente brasileira, desenvolvida no sul de Minas Gerais. O Mangalarga Marchador é famoso por seu andamento macio (marcha picada ou batida) que não dá o tréfego do trote tradicional, proporcionando máximo conforto ao cavaleiro em longas cavalgadas.</p>
+                        <span class="badge">Nacional / Marcha</span>
                     </div>
                 </div>
 
                 <div class="raca-card" data-category="elegancia">
-                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Cavalo Puro Sangue Árabe" class="card-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Arabian_Horse_head.jpg/800px-Arabian_Horse_head.jpg" alt="Foto de Cavalo Puro Sangue Árabe" class="card-img">
                     <div class="card-body">
                         <h3>Puro Sangue Árabe</h3>
-                        <p>Uma das raças mais antigas do mundo. Famosa por seu perfil facial único, cauda erguida ao marchar e excepcional resistência física em provas de longa distância.</p>
+                        <p>Uma das raças mais antigas e puras do planeta, originária da Península Arábica. Possui o perfil da cabeça côncavo, pescoço arqueado e cauda erguida. É imbatível em provas de resistência física e enduro equestre.</p>
                         <span class="badge">Resistência / Elegância</span>
                     </div>
                 </div>
 
                 <div class="raca-card" data-category="trabalho">
-                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=800&q=80" alt="Cavalo Quarto de Milha" class="card-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Quarter_Horse_Americano.jpg/800px-Quarter_Horse_Americano.jpg" alt="Foto de Cavalo Quarto de Milha" class="card-img">
                     <div class="card-body">
                         <h3>Quarto de Milha</h3>
-                        <p>Originário dos EUA, é muito popular para o trabalho com gado e desportos equestres. Possui uma musculatura poderosa e arranque extremamente rápido em curtas distâncias.</p>
+                        <p>Desenvolvido nos Estados Unidos, é famoso por ser o cavalo mais rápido do mundo em distâncias curtas (um quarto de milha). Possui traseiro extremamente musculoso, sendo o mais utilizado em trabalhos de gado e rodeios.</p>
                         <span class="badge">Velocidade / Lida</span>
                     </div>
                 </div>
 
                 <div class="raca-card" data-category="elegancia">
-                    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80" alt="Cavalo Frísio" class="card-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Friesian_horse.jpg/800px-Friesian_horse.jpg" alt="Foto de Cavalo Frísio" class="card-img">
                     <div class="card-body">
                         <h3>Frísio (Friesian)</h3>
-                        <p>Originário da Holanda, é famoso pela pelagem preta brilhante, crinas abundantes e onduladas e passos imponentes. Muito utilizado no adestramento e em produções de cinema.</p>
-                        <span class="badge">Imponente / Adestramento</span>
+                        <p>Originário da região da Frísia, na Holanda. É um cavalo imponente, com pelagem totalmente preta (sem manchas), crina e cauda longas e onduladas, e fartas pelagens nas canelas (plumas). Muito presente no adestramento clássico.</p>
+                        <span class="badge">Porte / Adestramento</span>
                     </div>
                 </div>
 
                 <div class="raca-card" data-category="forca">
-                    <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=800&q=80" alt="Cavalo Clydesdale" class="card-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Clydesdale_horse.jpg/800px-Clydesdale_horse.jpg" alt="Foto de Cavalo Clydesdale" class="card-img">
                     <div class="card-body">
                         <h3>Clydesdale</h3>
-                        <p>Originário da Escócia, é uma raça gigante de tração. Possui corpo extremamente musculoso com pelagens brancas e longas nas patas. Apesar do tamanho, tem temperamento dócil.</p>
+                        <p>Originário da Escócia, o Clydesdale é uma raça gigante de tração pesada. Reconhecido por suas patas brancas com longas "plumas" de pelos e porte forte, ultrapassando facilmente 900 kg. Apesar do tamanho, possui temperamento afável.</p>
                         <span class="badge">Tração / Força</span>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <hr>
 
         <section id="cuidados" class="card-section">
-            <h2>Cuidados Essenciais</h2>
+            <h2>Cuidados Básicos com o Cavalo</h2>
             <div class="cuidados-list">
                 <div class="care-item">
-                    <h4>🌾 Nutrição Equilibrada</h4>
-                    <p>Feno de boa qualidade, pastagem limpa e suplementação adequada à rotina do animal.</p>
+                    <h4>🌾 Alimentação</h4>
+                    <p>Feno de alta qualidade, pastagem limpa e ração equilibrada adequada ao gasto diário de energia.</p>
                 </div>
                 <div class="care-item">
-                    <h4>💧 Hidratação Constante</h4>
-                    <p>Água limpa e fresca à disposição (um cavalo bebe entre 30 e 50 litros por dia).</p>
+                    <h4>💧 Hidratação</h4>
+                    <p>Acesso constante à água fresca e potável (consomem de 30 a 50 litros por dia).</p>
                 </div>
                 <div class="care-item">
-                    <h4>🐴 Manutenção de Cascos</h4>
-                    <p>Limpeza diária e casqueamento ou ferragamento periódicos a cada 4 a 6 semanas.</p>
+                    <h4>🐴 Casqueamento</h4>
+                    <p>Limpeza diária dos cascos e casqueamento/ferragamento regular a cada 4 a 6 semanas.</p>
                 </div>
                 <div class="care-item">
-                    <h4>🩺 Veterinário & Vacinas</h4>
-                    <p>Controle rigoroso de vermifugação, vacinas anuais e exame dentário periódico.</p>
+                    <h4>🩺 Saúde e Vacinas</h4>
+                    <p>Vermifugação periódica, vacinação em dia e exames odontológicos anuais.</p>
                 </div>
             </div>
         </section>
 
         <section id="curiosidades" class="curiosidades-box">
-            <h2>Curiosidades do Mundo Equino</h2>
+            <h2>Curiosidade do Dia</h2>
             <div id="fact-display">
-                <p id="fact-text">Clique no botão para ver um fato sobre os cavalos!</p>
+                <p id="fact-text">Clique no botão abaixo para ver uma curiosidade sobre cavalos!</p>
             </div>
-            <button id="btn-fact">Ver Curiosidade</button>
+            <button id="btn-fact">Gerar Curiosidade</button>
         </section>
     </main>
 
