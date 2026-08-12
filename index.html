@@ -3,36 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo dos Cavalos - Raças Equinas</title>
+    <title>Mundo dos Cavalos - Raças e Curiosidades</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Mundo dos Cavalos</h1>
-        <p>Explore a beleza, a força e a diversidade das raças equinas!</p>
+        <p>Explore a beleza, a força e a história das raças equinas!</p>
     </header>
 
     <main>
         <!-- Galeria de Raças de Cavalos -->
         <section>
-            <h2>Raças Fascinantes</h2>
+            <h2>Galeria de Raças</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=400&q=80" alt="Cavalo Quarto de Milha">
+                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=400&q=80" alt="Quarto de Milha">
                     <div class="photo-caption">Quarto de Milha</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1598880940371-c756e015cea1?auto=format&fit=crop&w=400&q=80" alt="Cavalo Árabe">
+                    <img src="https://images.unsplash.com/photo-1598880940371-c756e015cea1?auto=format&fit=crop&w=400&q=80" alt="Árabe">
                     <div class="photo-caption">Árabe</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=400&q=80" alt="Cavalo Puro Sangue Inglês">
+                    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=400&q=80" alt="Puro Sangue Inglês">
                     <div class="photo-caption">Puro Sangue Inglês</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80" alt="Cavalo Mangalarga Marchador">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80" alt="Mangalarga Marchador">
                     <div class="photo-caption">Mangalarga Marchador</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Explicação sobre as Raças -->
+        <section class="info-section">
+            <h2>Conheça Mais sobre Cada Raça</h2>
+            <div class="breeds-container">
+                <div class="breed-card">
+                    <h3>Quarto de Milha</h3>
+                    <p>Famoso por sua incrível velocidade em curtas distâncias (um quarto de milha) e excelente instinto para o trabalho com gado. É um cavalo musculoso, dócil e muito versátil.</p>
+                </div>
+                <div class="breed-card">
+                    <h3>Cavalo Árabe</h3>
+                    <p>Uma das raças mais antigas e puras do mundo. Reconhecido pela cabeça de perfil côncavo, cauda erguida e grande estiramina. É sinônimo de elegância, inteligência e resistência.</p>
+                </div>
+                <div class="breed-card">
+                    <h3>Puro Sangue Inglês</h3>
+                    <p>O atleta supremo das pistas de corrida. Conhecido por sua altura, esbeltez, coração grande e velocidade explosiva. É a principal raça utilizada em turfe mundialmente.</p>
+                </div>
+                <div class="breed-card">
+                    <h3>Mangalarga Marchador</h3>
+                    <p>Raça brasileira de sela por excelência, famosa por sua marcha cômoda e natural. Combina rusticidade, grande comodidade para o cavaleiro e temperamento dócil.</p>
                 </div>
             </div>
         </section>
@@ -42,7 +65,7 @@
             <h2>Desafios Equestres</h2>
             <div class="games-container">
                 
-                <!-- Jogo 1: Jogo da Velha com Ferradura e Sela -->
+                <!-- Jogo 1: Jogo da Velha -->
                 <div class="game-card">
                     <h3>Ferradura vs Sela</h3>
                     <p style="font-size: 0.85rem; margin-bottom: 0.8rem; color: #555;">Ferradura (🐎) contra Sela (🤠)</p>
@@ -61,9 +84,9 @@
                     <div class="game-msg" id="ttt-msg">Vez de: 🐎 (Cavalo)</div>
                 </div>
 
-                <!-- Jogo 2: Adivinhe a Idade do Potro -->
+                <!-- Jogo 2: Adivinhe o Número -->
                 <div class="game-card">
-                    <h3>Adivinhe o Ano da Raça</h3>
+                    <h3>Adivinhe o Número da Sorte</h3>
                     <p style="font-size: 0.85rem; margin-bottom: 0.8rem;">Descubra o número secreto (1 a 10)</p>
                     <div>
                         <input type="number" id="guessInput" min="1" max="10">
